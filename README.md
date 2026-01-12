@@ -1,141 +1,46 @@
 # Godot Game Developer Roadmap (2026)
 
-A clean, modern roadmap and progress tracker web application for learning Godot game development. Built with Next.js, TypeScript, Tailwind CSS, and shadcn/ui.
+A comprehensive learning path for game developers who want to master Godot. This roadmap guides you from absolute beginner to advanced game developer with 60+ learning items and 7 practice projects.
 
-## Features
+## What You'll Learn
 
-- **Interactive Roadmap**: 60+ learning items organized into 9 sections
-- **Progress Tracking**: Mark items as complete, track overall progress with percentage
-- **Filtering & Search**: Filter by difficulty, category, completion status, and search by keywords
-- **Practice Projects**: 7 projects mapped to roadmap milestones with prerequisites and checklists
-- **Local Storage**: All progress persists in browser localStorage
-- **Responsive Design**: Works on desktop, tablet, and mobile devices
+This roadmap covers everything you need to build games with Godot, organized into 9 progressive sections:
 
-## Tech Stack
+1. **Foundations**: Master the core concepts—nodes, scenes, input handling, signals, and resources. Build your first playable prototype.
 
-- **Framework**: Next.js 14+ (App Router)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Components**: shadcn/ui (Radix UI primitives)
-- **State Management**: React Context API
-- **Persistence**: localStorage
+2. **2D Essentials**: Create engaging 2D games with sprites, tilemaps, collision detection, physics, and animation systems.
+
+3. **UI Systems**: Design polished interfaces using Control nodes, themes, containers, and dialogs for menus, HUDs, and game UI.
+
+4. **Game Systems**: Implement robust game architecture with state machines, save/load systems, event management, and data-driven design.
+
+5. **Content Pipeline**: Organize and manage assets efficiently, configure import settings, and build scalable project structures.
+
+6. **Tools & Automation**: Extend Godot with editor scripts, plugins, and export presets to streamline your workflow.
+
+7. **Performance & Optimization**: Profile your games, optimize draw calls, improve physics performance, and ensure smooth gameplay.
+
+8. **Shipping & Distribution**: Prepare your game for release with proper export settings, and learn to publish on itch.io and Steam.
+
+9. **Advanced Topics**: Explore multiplayer networking, shaders, 3D game development, and custom rendering techniques.
+
+## Practice Projects
+
+Complete 7 hands-on projects that reinforce your learning:
+- Each project maps to specific roadmap milestones
+- Prerequisites ensure you're ready before starting
+- Checklists guide you through implementation
+- Projects range from simple prototypes to full game systems
+
+## How to Use This Roadmap
+
+1. Start with the **Foundations** section and work through items sequentially
+2. Mark items as complete as you finish them to track your progress
+3. Use filters to focus on specific topics (difficulty, category, completion status)
+4. Search for keywords when you need to find specific concepts
+5. Complete practice projects when you've finished their prerequisites
+6. Your progress is automatically saved in your browser
 
 ## Getting Started
 
-### Prerequisites
-
-- Node.js 18+ and npm/yarn/pnpm
-
-### Installation
-
-1. Clone or navigate to the project directory:
-```bash
-cd godot-map
-```
-
-2. Install dependencies:
-```bash
-npm install
-# or
-yarn install
-# or
-pnpm install
-```
-
-3. Run the development server:
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
-
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-### Build for Production
-
-```bash
-npm run build
-npm start
-```
-
-## Project Structure
-
-```
-godot-map/
-├── app/                    # Next.js app router pages
-│   ├── layout.tsx         # Root layout with providers
-│   ├── page.tsx           # Home page
-│   ├── roadmap/           # Roadmap page
-│   └── projects/          # Projects page
-├── components/
-│   ├── ui/                # shadcn/ui components
-│   ├── roadmap/           # Roadmap-specific components
-│   ├── projects/          # Project components
-│   └── layout/            # Layout components
-├── data/
-│   └── roadmap.godot-2026.json  # Roadmap data
-├── lib/
-│   ├── store/             # State management
-│   └── utils.ts           # Utility functions
-└── public/                # Static assets
-```
-
-## Roadmap Sections
-
-1. **Foundations**: Nodes, scenes, input, signals, resources
-2. **2D Essentials**: Sprites, tilemaps, collisions, physics, animation
-3. **UI Systems**: Control nodes, themes, containers, dialogs
-4. **Game Systems**: State machines, save/load, events, data-driven design
-5. **Content Pipeline**: Asset management, import settings, organization
-6. **Tools & Automation**: Editor scripts, plugins, export presets
-7. **Performance & Optimization**: Profiling, draw calls, physics optimization
-8. **Shipping & Distribution**: Export settings, itch.io, Steam publishing
-9. **Advanced Topics**: Multiplayer, shaders, 3D basics, custom rendering
-
-## Features in Detail
-
-### Progress Tracking
-- Check off items as you complete them
-- View overall progress percentage
-- Track completion per section
-- All progress saved automatically to localStorage
-
-### Filtering
-- Filter by difficulty (Beginner/Intermediate/Advanced)
-- Filter by category (2D/3D/UI/Systems/Tools)
-- Show only remaining items
-- Search by title, summary, or keywords
-
-### Projects
-- 7 practice projects with varying scope
-- Prerequisites tracking (must complete roadmap items first)
-- Project checklists to guide development
-- Mark projects as complete
-
-## Data Model
-
-The roadmap data is stored in `data/roadmap.godot-2026.json` with:
-- **sections**: Learning sections with id, title, description
-- **items**: Roadmap items with id, sectionId, title, summary, difficulty, category, estimated hours, prerequisites, resources, keywords
-- **projects**: Practice projects with id, title, description, prerequisites, checklist, scope
-
-## Customization
-
-### Adding New Items
-Edit `data/roadmap.godot-2026.json` to add new roadmap items or projects.
-
-### Styling
-Modify `app/globals.css` and Tailwind classes in components to customize the appearance.
-
-### State Management
-State is managed in `lib/store/RoadmapContext.tsx`. Modify this file to add new state or actions.
-
-## License
-
-This project is open source and available for educational purposes.
-
-## Contributing
-
-Feel free to submit issues, fork the repository, and create pull requests for any improvements.
+Visit the roadmap to begin your Godot learning journey. No installation required—just open the app and start learning!
