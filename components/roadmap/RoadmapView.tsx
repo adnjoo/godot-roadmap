@@ -2,8 +2,11 @@
 
 import { useRoadmap } from "@/lib/store/RoadmapContext";
 import { RoadmapItemCard } from "./RoadmapItemCard";
-import roadmapData from "@/data/roadmap.godot-2026.json";
+import roadmapDataRaw from "@/data/roadmap.godot-2026.json";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import type { RoadmapData, RoadmapItem } from "@/types/roadmap";
+
+const roadmapData = roadmapDataRaw as RoadmapData;
 
 export function RoadmapView() {
   const { completedItems, filters } = useRoadmap();
@@ -46,7 +49,7 @@ export function RoadmapView() {
   );
 
   // Check if prerequisites are met
-  const canStartItem = (item: (typeof roadmapData.items)[0]) => {
+  const canStartItem = (item: RoadmapItem) => {
     if (item.prerequisites.length === 0) return true;
     return item.prerequisites.every((prereq) => completedItems.has(prereq));
   };
