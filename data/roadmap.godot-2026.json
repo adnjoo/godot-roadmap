@@ -1,0 +1,1129 @@
+{
+  "sections": [
+    {
+      "id": "foundations",
+      "title": "Foundations",
+      "description": "Core concepts: nodes, scenes, input handling, signals, and resources. Master the fundamentals before building games."
+    },
+    {
+      "id": "2d-essentials",
+      "title": "2D Essentials",
+      "description": "2D game development: sprites, tilemaps, collisions, physics, and animation systems."
+    },
+    {
+      "id": "ui-systems",
+      "title": "UI Systems",
+      "description": "User interface design: Control nodes, themes, layout containers, and responsive UI patterns."
+    },
+    {
+      "id": "game-systems",
+      "title": "Game Systems",
+      "description": "Advanced game architecture: state machines, save/load systems, event-driven design, and data management."
+    },
+    {
+      "id": "content-pipeline",
+      "title": "Content Pipeline",
+      "description": "Asset management: importing resources, configuring import settings, and organizing project structure."
+    },
+    {
+      "id": "tools-automation",
+      "title": "Tools & Automation",
+      "description": "Editor scripts, plugins, custom tools, and workflow automation to speed up development."
+    },
+    {
+      "id": "performance",
+      "title": "Performance & Optimization",
+      "description": "Profiling, optimization techniques, draw call reduction, and physics performance tuning."
+    },
+    {
+      "id": "shipping",
+      "title": "Shipping & Distribution",
+      "description": "Export settings, platform-specific builds, itch.io and Steam publishing, and release checklists."
+    },
+    {
+      "id": "advanced",
+      "title": "Advanced Topics",
+      "description": "Optional advanced topics: multiplayer networking, shaders, 3D basics, and custom rendering."
+    }
+  ],
+  "items": [
+    {
+      "id": "found-01",
+      "sectionId": "foundations",
+      "title": "Understanding Nodes and Scenes",
+      "summary": "Learn the fundamental building blocks: nodes as objects, scenes as compositions, and the scene tree hierarchy.",
+      "difficulty": "Beginner",
+      "category": "Systems",
+      "estHours": 2,
+      "prerequisites": [],
+      "resources": [
+        {
+          "label": "Official Docs: Nodes and Scenes",
+          "url": "https://docs.godotengine.org/en/stable/getting_started/step_by_step/nodes_and_scenes.html"
+        }
+      ],
+      "keywords": ["nodes", "scenes", "scene tree", "hierarchy", "composition"]
+    },
+    {
+      "id": "found-02",
+      "sectionId": "foundations",
+      "title": "Scene Instancing and Inheritance",
+      "summary": "Create reusable scene templates, instance scenes in other scenes, and use scene inheritance for variations.",
+      "difficulty": "Beginner",
+      "category": "Systems",
+      "estHours": 1.5,
+      "prerequisites": ["found-01"],
+      "resources": [
+        {
+          "label": "Instancing Scenes",
+          "url": "https://docs.godotengine.org/en/stable/getting_started/step_by_step/instancing.html"
+        }
+      ],
+      "keywords": ["instancing", "inheritance", "templates", "reusability"]
+    },
+    {
+      "id": "found-03",
+      "sectionId": "foundations",
+      "title": "GDScript Basics",
+      "summary": "Master GDScript syntax: variables, functions, control flow, and basic data structures.",
+      "difficulty": "Beginner",
+      "category": "Systems",
+      "estHours": 3,
+      "prerequisites": [],
+      "resources": [
+        {
+          "label": "GDScript Documentation",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html"
+        }
+      ],
+      "keywords": ["gdscript", "scripting", "syntax", "programming"]
+    },
+    {
+      "id": "found-04",
+      "sectionId": "foundations",
+      "title": "Input Handling",
+      "summary": "Capture keyboard, mouse, and gamepad input using Input singleton and InputEvent system.",
+      "difficulty": "Beginner",
+      "category": "Systems",
+      "estHours": 2,
+      "prerequisites": ["found-03"],
+      "resources": [
+        {
+          "label": "Input Handling Guide",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/inputs/index.html"
+        }
+      ],
+      "keywords": ["input", "keyboard", "mouse", "gamepad", "controls"]
+    },
+    {
+      "id": "found-05",
+      "sectionId": "foundations",
+      "title": "Signals and Events",
+      "summary": "Use signals for decoupled communication between nodes. Connect signals in code and editor.",
+      "difficulty": "Beginner",
+      "category": "Systems",
+      "estHours": 2.5,
+      "prerequisites": ["found-03"],
+      "resources": [
+        {
+          "label": "Signals Tutorial",
+          "url": "https://docs.godotengine.org/en/stable/getting_started/step_by_step/signals.html"
+        }
+      ],
+      "keywords": ["signals", "events", "decoupling", "communication"]
+    },
+    {
+      "id": "found-06",
+      "sectionId": "foundations",
+      "title": "Resources and Exports",
+      "summary": "Create and use Resource scripts, export properties to the inspector, and manage resource data.",
+      "difficulty": "Intermediate",
+      "category": "Systems",
+      "estHours": 2,
+      "prerequisites": ["found-03"],
+      "resources": [
+        {
+          "label": "Resources Documentation",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/resources.html"
+        }
+      ],
+      "keywords": ["resources", "exports", "inspector", "data"]
+    },
+    {
+      "id": "found-07",
+      "sectionId": "foundations",
+      "title": "Groups and Autoloads",
+      "summary": "Organize nodes with groups, use Autoload singletons for global state, and access nodes by group.",
+      "difficulty": "Intermediate",
+      "category": "Systems",
+      "estHours": 1.5,
+      "prerequisites": ["found-01", "found-03"],
+      "resources": [
+        {
+          "label": "Autoload Tutorial",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/singletons_autoload.html"
+        }
+      ],
+      "keywords": ["groups", "autoload", "singletons", "global"]
+    },
+    {
+      "id": "found-08",
+      "sectionId": "foundations",
+      "title": "Scene Tree and get_node()",
+      "summary": "Navigate the scene tree, use get_node() with paths, and understand $ shorthand syntax.",
+      "difficulty": "Beginner",
+      "category": "Systems",
+      "estHours": 1.5,
+      "prerequisites": ["found-01", "found-03"],
+      "resources": [
+        {
+          "label": "Scene Tree Access",
+          "url": "https://docs.godotengine.org/en/stable/getting_started/step_by_step/scene_tree.html"
+        }
+      ],
+      "keywords": ["scene tree", "get_node", "node paths", "navigation"]
+    },
+    {
+      "id": "2d-01",
+      "sectionId": "2d-essentials",
+      "title": "2D Coordinate System",
+      "summary": "Understand Godot's 2D coordinate system: origin, position, rotation, and scale. Learn local vs global transforms.",
+      "difficulty": "Beginner",
+      "category": "2D",
+      "estHours": 1.5,
+      "prerequisites": ["found-01"],
+      "resources": [
+        {
+          "label": "2D Coordinate System",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/2d/2d_transforms.html"
+        }
+      ],
+      "keywords": ["2d", "coordinates", "transform", "position", "rotation"]
+    },
+    {
+      "id": "2d-02",
+      "sectionId": "2d-essentials",
+      "title": "Sprites and Texture Regions",
+      "summary": "Display images with Sprite2D, use TextureRect for UI, and configure texture regions and filtering.",
+      "difficulty": "Beginner",
+      "category": "2D",
+      "estHours": 2,
+      "prerequisites": ["2d-01"],
+      "resources": [
+        {
+          "label": "Sprite2D Documentation",
+          "url": "https://docs.godotengine.org/en/stable/classes/class_sprite2d.html"
+        }
+      ],
+      "keywords": ["sprite", "texture", "image", "display"]
+    },
+    {
+      "id": "2d-03",
+      "sectionId": "2d-essentials",
+      "title": "Tilemap Basics",
+      "summary": "Create tilemaps with TileSet resources, paint tiles in the editor, and use TileMap nodes for level design.",
+      "difficulty": "Beginner",
+      "category": "2D",
+      "estHours": 3,
+      "prerequisites": ["2d-01"],
+      "resources": [
+        {
+          "label": "TileMap Tutorial",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/2d/using_tilemaps.html"
+        }
+      ],
+      "keywords": ["tilemap", "tileset", "level design", "grid"]
+    },
+    {
+      "id": "2d-04",
+      "sectionId": "2d-essentials",
+      "title": "Collision Detection",
+      "summary": "Set up collision shapes with CollisionShape2D, use Area2D for detection, and handle collision events.",
+      "difficulty": "Beginner",
+      "category": "2D",
+      "estHours": 2.5,
+      "prerequisites": ["2d-01"],
+      "resources": [
+        {
+          "label": "Collision Detection",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/physics/collision_detection.html"
+        }
+      ],
+      "keywords": ["collision", "collision shape", "area2d", "detection"]
+    },
+    {
+      "id": "2d-05",
+      "sectionId": "2d-essentials",
+      "title": "CharacterBody2D Movement",
+      "summary": "Implement character movement with CharacterBody2D, handle gravity, jumping, and platformer physics.",
+      "difficulty": "Intermediate",
+      "category": "2D",
+      "estHours": 4,
+      "prerequisites": ["2d-04", "found-04"],
+      "resources": [
+        {
+          "label": "CharacterBody2D Guide",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/physics/using_character_body_2d.html"
+        }
+      ],
+      "keywords": ["character", "movement", "physics", "platformer", "jumping"]
+    },
+    {
+      "id": "2d-06",
+      "sectionId": "2d-essentials",
+      "title": "RigidBody2D Physics",
+      "summary": "Use RigidBody2D for physics-based objects, apply forces, and handle collisions with physics bodies.",
+      "difficulty": "Intermediate",
+      "category": "2D",
+      "estHours": 3,
+      "prerequisites": ["2d-04"],
+      "resources": [
+        {
+          "label": "RigidBody2D Documentation",
+          "url": "https://docs.godotengine.org/en/stable/classes/class_rigidbody2d.html"
+        }
+      ],
+      "keywords": ["rigidbody", "physics", "forces", "simulation"]
+    },
+    {
+      "id": "2d-07",
+      "sectionId": "2d-essentials",
+      "title": "AnimationPlayer Basics",
+      "summary": "Create animations with AnimationPlayer, animate properties, and play animations from code.",
+      "difficulty": "Beginner",
+      "category": "2D",
+      "estHours": 3,
+      "prerequisites": ["found-01"],
+      "resources": [
+        {
+          "label": "AnimationPlayer Tutorial",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/animation/introduction.html"
+        }
+      ],
+      "keywords": ["animation", "animationplayer", "keyframes", "timeline"]
+    },
+    {
+      "id": "2d-08",
+      "sectionId": "2d-essentials",
+      "title": "Sprite2D Animation with AnimatedSprite2D",
+      "summary": "Use AnimatedSprite2D for sprite sheet animations, create SpriteFrames resources, and switch animations.",
+      "difficulty": "Beginner",
+      "category": "2D",
+      "estHours": 2.5,
+      "prerequisites": ["2d-02"],
+      "resources": [
+        {
+          "label": "AnimatedSprite2D Guide",
+          "url": "https://docs.godotengine.org/en/stable/classes/class_animatedsprite2d.html"
+        }
+      ],
+      "keywords": ["animated sprite", "sprite frames", "sprite sheet", "animation"]
+    },
+    {
+      "id": "2d-09",
+      "sectionId": "2d-essentials",
+      "title": "Camera2D Setup",
+      "summary": "Configure Camera2D for viewport control, implement camera follow, limits, and smoothing.",
+      "difficulty": "Beginner",
+      "category": "2D",
+      "estHours": 2,
+      "prerequisites": ["2d-01"],
+      "resources": [
+        {
+          "label": "Camera2D Documentation",
+          "url": "https://docs.godotengine.org/en/stable/classes/class_camera2d.html"
+        }
+      ],
+      "keywords": ["camera", "viewport", "follow", "smoothing"]
+    },
+    {
+      "id": "2d-10",
+      "sectionId": "2d-essentials",
+      "title": "Parallax Backgrounds",
+      "summary": "Create parallax scrolling backgrounds using ParallaxBackground and ParallaxLayer nodes.",
+      "difficulty": "Intermediate",
+      "category": "2D",
+      "estHours": 2,
+      "prerequisites": ["2d-09"],
+      "resources": [
+        {
+          "label": "ParallaxBackground Guide",
+          "url": "https://docs.godotengine.org/en/stable/classes/class_parallaxbackground.html"
+        }
+      ],
+      "keywords": ["parallax", "background", "scrolling", "layers"]
+    },
+    {
+      "id": "2d-11",
+      "sectionId": "2d-essentials",
+      "title": "Raycasting and Line of Sight",
+      "summary": "Use RayCast2D for line-of-sight checks, collision detection, and distance measurements.",
+      "difficulty": "Intermediate",
+      "category": "2D",
+      "estHours": 2.5,
+      "prerequisites": ["2d-04", "found-03"],
+      "resources": [
+        {
+          "label": "RayCast2D Tutorial",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/physics/ray-casting.html"
+        }
+      ],
+      "keywords": ["raycast", "line of sight", "detection", "distance"]
+    },
+    {
+      "id": "2d-12",
+      "sectionId": "2d-essentials",
+      "title": "Particle Systems",
+      "summary": "Create visual effects with GPUParticles2D, configure emitters, and design particle materials.",
+      "difficulty": "Intermediate",
+      "category": "2D",
+      "estHours": 3,
+      "prerequisites": ["2d-01"],
+      "resources": [
+        {
+          "label": "Particle Systems Guide",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/2d/particle_systems_2d.html"
+        }
+      ],
+      "keywords": ["particles", "effects", "emitter", "visual"]
+    },
+    {
+      "id": "ui-01",
+      "sectionId": "ui-systems",
+      "title": "Control Node Basics",
+      "summary": "Understand Control nodes as the foundation of UI, anchors, margins, and the UI layout system.",
+      "difficulty": "Beginner",
+      "category": "UI",
+      "estHours": 2,
+      "prerequisites": ["found-01"],
+      "resources": [
+        {
+          "label": "Control Node Documentation",
+          "url": "https://docs.godotengine.org/en/stable/classes/class_control.html"
+        }
+      ],
+      "keywords": ["control", "ui", "layout", "anchors"]
+    },
+    {
+      "id": "ui-02",
+      "sectionId": "ui-systems",
+      "title": "Layout Containers",
+      "summary": "Use VBoxContainer, HBoxContainer, GridContainer, and MarginContainer for responsive UI layouts.",
+      "difficulty": "Beginner",
+      "category": "UI",
+      "estHours": 2.5,
+      "prerequisites": ["ui-01"],
+      "resources": [
+        {
+          "label": "Container Nodes",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/ui/containers.html"
+        }
+      ],
+      "keywords": ["container", "layout", "vbox", "hbox", "grid"]
+    },
+    {
+      "id": "ui-03",
+      "sectionId": "ui-systems",
+      "title": "Buttons and Labels",
+      "summary": "Create interactive buttons, display text with Label nodes, and handle button signals.",
+      "difficulty": "Beginner",
+      "category": "UI",
+      "estHours": 1.5,
+      "prerequisites": ["ui-01", "found-05"],
+      "resources": [
+        {
+          "label": "Button Documentation",
+          "url": "https://docs.godotengine.org/en/stable/classes/class_button.html"
+        }
+      ],
+      "keywords": ["button", "label", "text", "interactive"]
+    },
+    {
+      "id": "ui-04",
+      "sectionId": "ui-systems",
+      "title": "LineEdit and Text Input",
+      "summary": "Implement text input fields with LineEdit, validate input, and handle text change events.",
+      "difficulty": "Beginner",
+      "category": "UI",
+      "estHours": 2,
+      "prerequisites": ["ui-01"],
+      "resources": [
+        {
+          "label": "LineEdit Guide",
+          "url": "https://docs.godotengine.org/en/stable/classes/class_lineedit.html"
+        }
+      ],
+      "keywords": ["input", "text field", "lineedit", "validation"]
+    },
+    {
+      "id": "ui-05",
+      "sectionId": "ui-systems",
+      "title": "UI Themes and Styling",
+      "summary": "Create and apply Theme resources, style UI elements, and build consistent visual design.",
+      "difficulty": "Intermediate",
+      "category": "UI",
+      "estHours": 3,
+      "prerequisites": ["ui-01"],
+      "resources": [
+        {
+          "label": "Themes Tutorial",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/ui/gui_skinning.html"
+        }
+      ],
+      "keywords": ["theme", "styling", "design", "visual"]
+    },
+    {
+      "id": "ui-06",
+      "sectionId": "ui-systems",
+      "title": "Dialogs and Popups",
+      "summary": "Create modal dialogs with AcceptDialog, ConfirmationDialog, and custom popup windows.",
+      "difficulty": "Intermediate",
+      "category": "UI",
+      "estHours": 2.5,
+      "prerequisites": ["ui-01", "ui-03"],
+      "resources": [
+        {
+          "label": "Dialog Nodes",
+          "url": "https://docs.godotengine.org/en/stable/classes/class_acceptdialog.html"
+        }
+      ],
+      "keywords": ["dialog", "popup", "modal", "window"]
+    },
+    {
+      "id": "ui-07",
+      "sectionId": "ui-systems",
+      "title": "ScrollContainer and Lists",
+      "summary": "Implement scrollable content with ScrollContainer and ItemList for displaying lists of items.",
+      "difficulty": "Beginner",
+      "category": "UI",
+      "estHours": 2,
+      "prerequisites": ["ui-01"],
+      "resources": [
+        {
+          "label": "ScrollContainer Documentation",
+          "url": "https://docs.godotengine.org/en/stable/classes/class_scrollcontainer.html"
+        }
+      ],
+      "keywords": ["scroll", "list", "container", "scrollable"]
+    },
+    {
+      "id": "ui-08",
+      "sectionId": "ui-systems",
+      "title": "ProgressBar and Sliders",
+      "summary": "Display progress with ProgressBar, create adjustable sliders with HSlider/VSlider, and handle value changes.",
+      "difficulty": "Beginner",
+      "category": "UI",
+      "estHours": 1.5,
+      "prerequisites": ["ui-01"],
+      "resources": [
+        {
+          "label": "ProgressBar Guide",
+          "url": "https://docs.godotengine.org/en/stable/classes/class_progressbar.html"
+        }
+      ],
+      "keywords": ["progress", "slider", "value", "adjustable"]
+    },
+    {
+      "id": "ui-09",
+      "sectionId": "ui-systems",
+      "title": "TabContainer and Organized UI",
+      "summary": "Organize UI with TabContainer, create tabbed interfaces, and manage multiple UI panels.",
+      "difficulty": "Intermediate",
+      "category": "UI",
+      "estHours": 2,
+      "prerequisites": ["ui-01", "ui-02"],
+      "resources": [
+        {
+          "label": "TabContainer Documentation",
+          "url": "https://docs.godotengine.org/en/stable/classes/class_tabcontainer.html"
+        }
+      ],
+      "keywords": ["tabs", "organization", "panels", "interface"]
+    },
+    {
+      "id": "ui-10",
+      "sectionId": "ui-systems",
+      "title": "Custom Control Scripts",
+      "summary": "Extend Control nodes with custom scripts, create reusable UI components, and handle custom drawing.",
+      "difficulty": "Advanced",
+      "category": "UI",
+      "estHours": 3,
+      "prerequisites": ["ui-01", "found-03"],
+      "resources": [
+        {
+          "label": "Custom Drawing",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/2d/custom_drawing_in_2d.html"
+        }
+      ],
+      "keywords": ["custom", "control", "drawing", "components"]
+    },
+    {
+      "id": "game-01",
+      "sectionId": "game-systems",
+      "title": "State Machines",
+      "summary": "Implement finite state machines for game logic, manage state transitions, and organize game flow.",
+      "difficulty": "Intermediate",
+      "category": "Systems",
+      "estHours": 4,
+      "prerequisites": ["found-03", "found-05"],
+      "resources": [
+        {
+          "label": "State Machine Pattern",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/best_practices/node_alternatives.html"
+        }
+      ],
+      "keywords": ["state machine", "fsm", "states", "transitions"]
+    },
+    {
+      "id": "game-02",
+      "sectionId": "game-systems",
+      "title": "Save and Load Systems",
+      "summary": "Save game data to files, load saved games, and implement persistent game state.",
+      "difficulty": "Intermediate",
+      "category": "Systems",
+      "estHours": 3.5,
+      "prerequisites": ["found-03", "found-06"],
+      "resources": [
+        {
+          "label": "File System Tutorial",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/io/data_paths.html"
+        }
+      ],
+      "keywords": ["save", "load", "persistence", "file system"]
+    },
+    {
+      "id": "game-03",
+      "sectionId": "game-systems",
+      "title": "Event Bus Pattern",
+      "summary": "Create a global event bus using Autoload, decouple systems with events, and manage game-wide communication.",
+      "difficulty": "Intermediate",
+      "category": "Systems",
+      "estHours": 3,
+      "prerequisites": ["found-07", "found-05"],
+      "resources": [
+        {
+          "label": "Event System Pattern",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/best_practices/node_alternatives.html"
+        }
+      ],
+      "keywords": ["event bus", "events", "decoupling", "communication"]
+    },
+    {
+      "id": "game-04",
+      "sectionId": "game-systems",
+      "title": "Data-Driven Design",
+      "summary": "Use JSON, ConfigFile, or custom Resources for data-driven game design and configuration.",
+      "difficulty": "Intermediate",
+      "category": "Systems",
+      "estHours": 3,
+      "prerequisites": ["found-06", "found-03"],
+      "resources": [
+        {
+          "label": "JSON Tutorial",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/io/json.html"
+        }
+      ],
+      "keywords": ["data-driven", "json", "config", "design"]
+    },
+    {
+      "id": "game-05",
+      "sectionId": "game-systems",
+      "title": "Inventory Systems",
+      "summary": "Design and implement inventory management, item storage, and item interaction systems.",
+      "difficulty": "Intermediate",
+      "category": "Systems",
+      "estHours": 4,
+      "prerequisites": ["game-04", "ui-07"],
+      "resources": [
+        {
+          "label": "Inventory System Example",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/best_practices/godot_notifications.html"
+        }
+      ],
+      "keywords": ["inventory", "items", "storage", "management"]
+    },
+    {
+      "id": "game-06",
+      "sectionId": "game-systems",
+      "title": "Quest and Objective Systems",
+      "summary": "Create quest tracking, objectives, and progression systems for narrative or goal-based gameplay.",
+      "difficulty": "Intermediate",
+      "category": "Systems",
+      "estHours": 4,
+      "prerequisites": ["game-03", "game-04"],
+      "resources": [
+        {
+          "label": "Quest System Design",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/best_practices/index.html"
+        }
+      ],
+      "keywords": ["quest", "objectives", "progression", "tracking"]
+    },
+    {
+      "id": "game-07",
+      "sectionId": "game-systems",
+      "title": "Audio Management",
+      "summary": "Play sound effects and music with AudioStreamPlayer, manage audio buses, and implement audio settings.",
+      "difficulty": "Beginner",
+      "category": "Systems",
+      "estHours": 2.5,
+      "prerequisites": ["found-01"],
+      "resources": [
+        {
+          "label": "Audio System",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/audio/index.html"
+        }
+      ],
+      "keywords": ["audio", "sound", "music", "audio player"]
+    },
+    {
+      "id": "game-08",
+      "sectionId": "game-systems",
+      "title": "Timer and Cooldown Systems",
+      "summary": "Use Timer nodes, implement cooldowns, and manage time-based game mechanics.",
+      "difficulty": "Beginner",
+      "category": "Systems",
+      "estHours": 2,
+      "prerequisites": ["found-01", "found-03"],
+      "resources": [
+        {
+          "label": "Timer Documentation",
+          "url": "https://docs.godotengine.org/en/stable/classes/class_timer.html"
+        }
+      ],
+      "keywords": ["timer", "cooldown", "time", "delays"]
+    },
+    {
+      "id": "content-01",
+      "sectionId": "content-pipeline",
+      "title": "Import Settings and Assets",
+      "summary": "Configure import settings for images, audio, and other assets. Understand compression and format options.",
+      "difficulty": "Beginner",
+      "category": "Tools",
+      "estHours": 2,
+      "prerequisites": [],
+      "resources": [
+        {
+          "label": "Import System",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/importing_images.html"
+        }
+      ],
+      "keywords": ["import", "assets", "compression", "settings"]
+    },
+    {
+      "id": "content-02",
+      "sectionId": "content-pipeline",
+      "title": "Project Organization",
+      "summary": "Structure your project folders, organize scenes, scripts, and assets for maintainability.",
+      "difficulty": "Beginner",
+      "category": "Tools",
+      "estHours": 1.5,
+      "prerequisites": [],
+      "resources": [
+        {
+          "label": "Project Organization",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/best_practices/project_organization.html"
+        }
+      ],
+      "keywords": ["organization", "structure", "folders", "maintainability"]
+    },
+    {
+      "id": "content-03",
+      "sectionId": "content-pipeline",
+      "title": "Scene Organization Patterns",
+      "summary": "Learn best practices for scene composition, when to split scenes, and scene dependency management.",
+      "difficulty": "Intermediate",
+      "category": "Tools",
+      "estHours": 2,
+      "prerequisites": ["found-01", "content-02"],
+      "resources": [
+        {
+          "label": "Scene Organization",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/best_practices/scene_organization.html"
+        }
+      ],
+      "keywords": ["scenes", "organization", "composition", "patterns"]
+    },
+    {
+      "id": "content-04",
+      "sectionId": "content-pipeline",
+      "title": "Resource Preloading",
+      "summary": "Preload resources to avoid runtime loading, use preload() vs load(), and manage resource dependencies.",
+      "difficulty": "Intermediate",
+      "category": "Tools",
+      "estHours": 2,
+      "prerequisites": ["found-06"],
+      "resources": [
+        {
+          "label": "Resource Loading",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/resources.html"
+        }
+      ],
+      "keywords": ["preload", "resources", "loading", "dependencies"]
+    },
+    {
+      "id": "tools-01",
+      "sectionId": "tools-automation",
+      "title": "Editor Scripts Basics",
+      "summary": "Write editor scripts with @tool annotation, automate repetitive tasks, and extend the editor.",
+      "difficulty": "Advanced",
+      "category": "Tools",
+      "estHours": 4,
+      "prerequisites": ["found-03"],
+      "resources": [
+        {
+          "label": "Editor Scripts",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/plugins/editor/index.html"
+        }
+      ],
+      "keywords": ["editor", "scripts", "tool", "automation"]
+    },
+    {
+      "id": "tools-02",
+      "sectionId": "tools-automation",
+      "title": "Custom Plugins",
+      "summary": "Create editor plugins, add custom dock panels, and build tools for your workflow.",
+      "difficulty": "Advanced",
+      "category": "Tools",
+      "estHours": 5,
+      "prerequisites": ["tools-01"],
+      "resources": [
+        {
+          "label": "Plugin Development",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/plugins/editor/index.html"
+        }
+      ],
+      "keywords": ["plugins", "editor", "custom", "tools"]
+    },
+    {
+      "id": "tools-03",
+      "sectionId": "tools-automation",
+      "title": "Export Templates and Presets",
+      "summary": "Configure export presets, set up platform-specific settings, and automate export workflows.",
+      "difficulty": "Intermediate",
+      "category": "Tools",
+      "estHours": 2.5,
+      "prerequisites": ["shipping-01"],
+      "resources": [
+        {
+          "label": "Export System",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/export/index.html"
+        }
+      ],
+      "keywords": ["export", "presets", "templates", "platforms"]
+    },
+    {
+      "id": "perf-01",
+      "sectionId": "performance",
+      "title": "Profiling and Debugging",
+      "summary": "Use the Profiler, identify performance bottlenecks, and optimize game performance.",
+      "difficulty": "Intermediate",
+      "category": "Systems",
+      "estHours": 3,
+      "prerequisites": ["found-03"],
+      "resources": [
+        {
+          "label": "Profiling Guide",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/performance/index.html"
+        }
+      ],
+      "keywords": ["profiling", "performance", "debugging", "optimization"]
+    },
+    {
+      "id": "perf-02",
+      "sectionId": "performance",
+      "title": "Draw Call Optimization",
+      "summary": "Reduce draw calls with texture atlases, batching, and efficient sprite usage.",
+      "difficulty": "Advanced",
+      "category": "Systems",
+      "estHours": 3.5,
+      "prerequisites": ["2d-02", "perf-01"],
+      "resources": [
+        {
+          "label": "Performance Optimization",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/performance/index.html"
+        }
+      ],
+      "keywords": ["draw calls", "batching", "optimization", "performance"]
+    },
+    {
+      "id": "perf-03",
+      "sectionId": "performance",
+      "title": "Physics Performance",
+      "summary": "Optimize physics performance, reduce collision checks, and use physics layers efficiently.",
+      "difficulty": "Advanced",
+      "category": "Systems",
+      "estHours": 3,
+      "prerequisites": ["2d-04", "perf-01"],
+      "resources": [
+        {
+          "label": "Physics Optimization",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/physics/physics_introduction.html"
+        }
+      ],
+      "keywords": ["physics", "collision", "optimization", "layers"]
+    },
+    {
+      "id": "perf-04",
+      "sectionId": "performance",
+      "title": "Object Pooling",
+      "summary": "Implement object pooling for frequently created/destroyed objects like bullets and particles.",
+      "difficulty": "Advanced",
+      "category": "Systems",
+      "estHours": 3,
+      "prerequisites": ["found-03", "perf-01"],
+      "resources": [
+        {
+          "label": "Object Pooling Pattern",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/best_practices/node_alternatives.html"
+        }
+      ],
+      "keywords": ["pooling", "optimization", "memory", "performance"]
+    },
+    {
+      "id": "shipping-01",
+      "sectionId": "shipping",
+      "title": "Export Settings and Builds",
+      "summary": "Configure export settings for different platforms, create release builds, and test exported games.",
+      "difficulty": "Intermediate",
+      "category": "Tools",
+      "estHours": 3,
+      "prerequisites": [],
+      "resources": [
+        {
+          "label": "Export Tutorial",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/export/index.html"
+        }
+      ],
+      "keywords": ["export", "build", "release", "platforms"]
+    },
+    {
+      "id": "shipping-02",
+      "sectionId": "shipping",
+      "title": "itch.io Publishing",
+      "summary": "Prepare your game for itch.io, create game pages, and publish your first game.",
+      "difficulty": "Beginner",
+      "category": "Tools",
+      "estHours": 2,
+      "prerequisites": ["shipping-01"],
+      "resources": [
+        {
+          "label": "itch.io Publishing Guide",
+          "url": "https://itch.io/docs/creators/getting-started"
+        }
+      ],
+      "keywords": ["itch.io", "publishing", "distribution", "release"]
+    },
+    {
+      "id": "shipping-03",
+      "sectionId": "shipping",
+      "title": "Steam Publishing Basics",
+      "summary": "Understand Steam publishing requirements, prepare Steam builds, and navigate Steamworks.",
+      "difficulty": "Advanced",
+      "category": "Tools",
+      "estHours": 4,
+      "prerequisites": ["shipping-01"],
+      "resources": [
+        {
+          "label": "Steam Publishing",
+          "url": "https://partner.steamgames.com/doc/home"
+        }
+      ],
+      "keywords": ["steam", "publishing", "steamworks", "distribution"]
+    },
+    {
+      "id": "shipping-04",
+      "sectionId": "shipping",
+      "title": "Release Checklist",
+      "summary": "Create a comprehensive release checklist: testing, bug fixes, marketing materials, and launch preparation.",
+      "difficulty": "Intermediate",
+      "category": "Tools",
+      "estHours": 2,
+      "prerequisites": ["shipping-01"],
+      "resources": [
+        {
+          "label": "Release Best Practices",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/export/index.html"
+        }
+      ],
+      "keywords": ["release", "checklist", "testing", "launch"]
+    },
+    {
+      "id": "adv-01",
+      "sectionId": "advanced",
+      "title": "Multiplayer Networking",
+      "summary": "Implement multiplayer with ENet, handle network synchronization, and create networked games.",
+      "difficulty": "Advanced",
+      "category": "Systems",
+      "estHours": 6,
+      "prerequisites": ["game-03", "found-03"],
+      "resources": [
+        {
+          "label": "Multiplayer Tutorial",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/networking/index.html"
+        }
+      ],
+      "keywords": ["multiplayer", "networking", "enet", "synchronization"]
+    },
+    {
+      "id": "adv-02",
+      "sectionId": "advanced",
+      "title": "Shader Basics",
+      "summary": "Write custom shaders with GDScript shaders, create visual effects, and understand shader language basics.",
+      "difficulty": "Advanced",
+      "category": "2D",
+      "estHours": 5,
+      "prerequisites": ["2d-01"],
+      "resources": [
+        {
+          "label": "Shaders Tutorial",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/shaders/index.html"
+        }
+      ],
+      "keywords": ["shaders", "visual effects", "graphics", "rendering"]
+    },
+    {
+      "id": "adv-03",
+      "sectionId": "advanced",
+      "title": "3D Basics",
+      "summary": "Introduction to 3D in Godot: 3D nodes, transforms, cameras, and basic 3D scene setup.",
+      "difficulty": "Intermediate",
+      "category": "3D",
+      "estHours": 4,
+      "prerequisites": ["found-01"],
+      "resources": [
+        {
+          "label": "3D Basics",
+          "url": "https://docs.godotengine.org/en/stable/tutorials/3d/index.html"
+        }
+      ],
+      "keywords": ["3d", "three dimensional", "camera", "transforms"]
+    },
+    {
+      "id": "adv-04",
+      "sectionId": "advanced",
+      "title": "Custom Rendering",
+      "summary": "Use RenderingServer for custom rendering, create procedural graphics, and advanced visual effects.",
+      "difficulty": "Advanced",
+      "category": "2D",
+      "estHours": 6,
+      "prerequisites": ["adv-02", "found-03"],
+      "resources": [
+        {
+          "label": "RenderingServer",
+          "url": "https://docs.godotengine.org/en/stable/classes/class_renderingserver.html"
+        }
+      ],
+      "keywords": ["rendering", "procedural", "graphics", "visual effects"]
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj-01",
+      "title": "Tiny Platformer",
+      "description": "Create a simple 2D platformer with a player character that can move, jump, and collect items. Focus on basic movement, collisions, and level design.",
+      "prerequisites": ["found-01", "found-03", "found-04", "2d-01", "2d-02", "2d-04", "2d-05", "2d-09"],
+      "checklist": [
+        "Set up player scene with CharacterBody2D",
+        "Implement horizontal movement and jumping",
+        "Create a simple level with platforms",
+        "Add collectible items",
+        "Implement basic camera follow",
+        "Add simple UI for score"
+      ],
+      "scope": "Small project: 1-2 levels, basic mechanics, 4-6 hours"
+    },
+    {
+      "id": "proj-02",
+      "title": "Rooftop Farm Prototype",
+      "description": "Build a farming game prototype with planting, harvesting, and inventory management. Practice UI design, state management, and data persistence.",
+      "prerequisites": ["2d-01", "2d-02", "ui-01", "ui-02", "ui-03", "game-04", "game-05"],
+      "checklist": [
+        "Design farm grid system",
+        "Implement planting and harvesting mechanics",
+        "Create inventory UI",
+        "Add day/night cycle",
+        "Implement save/load system",
+        "Create crop growth system"
+      ],
+      "scope": "Medium project: core mechanics, multiple systems, 8-12 hours"
+    },
+    {
+      "id": "proj-03",
+      "title": "Top-down Explorer",
+      "description": "Create a top-down exploration game with character movement, world interaction, and simple quest system. Practice camera controls and world design.",
+      "prerequisites": ["2d-01", "2d-02", "2d-04", "2d-05", "2d-09", "ui-01", "game-06"],
+      "checklist": [
+        "Set up top-down character movement",
+        "Create explorable world with multiple areas",
+        "Implement interaction system",
+        "Add simple quest/objective tracking",
+        "Design world with tilemaps",
+        "Add minimap or world map"
+      ],
+      "scope": "Medium project: multiple areas, quest system, 10-15 hours"
+    },
+    {
+      "id": "proj-04",
+      "title": "UI-only Menu Polish",
+      "description": "Focus entirely on UI/UX design. Create a polished main menu, settings screen, and pause menu with smooth transitions and professional styling.",
+      "prerequisites": ["ui-01", "ui-02", "ui-03", "ui-05", "ui-06", "ui-09"],
+      "checklist": [
+        "Design main menu with animations",
+        "Create settings screen with audio/video options",
+        "Build pause menu system",
+        "Implement theme and consistent styling",
+        "Add smooth transitions between screens",
+        "Test on different screen sizes"
+      ],
+      "scope": "Small project: UI focus, no gameplay, 4-6 hours"
+    },
+    {
+      "id": "proj-05",
+      "title": "Physics Playground",
+      "description": "Experiment with RigidBody2D physics, create interactive physics objects, and build a sandbox with various physics interactions.",
+      "prerequisites": ["2d-06", "2d-04", "found-04"],
+      "checklist": [
+        "Create various physics objects",
+        "Implement force application",
+        "Add interactive elements (buttons, levers)",
+        "Create physics-based puzzles",
+        "Add visual feedback for interactions",
+        "Experiment with different physics materials"
+      ],
+      "scope": "Small project: experimentation focus, 4-6 hours"
+    },
+    {
+      "id": "proj-06",
+      "title": "Animation Showcase",
+      "description": "Practice animation skills by creating a character with multiple animation states, smooth transitions, and visual effects.",
+      "prerequisites": ["2d-07", "2d-08", "2d-12"],
+      "checklist": [
+        "Create character sprite animations",
+        "Implement animation state machine",
+        "Add smooth transitions between states",
+        "Create particle effects for actions",
+        "Add visual feedback (screen shake, flashes)",
+        "Polish animation timing and feel"
+      ],
+      "scope": "Small project: animation focus, 5-7 hours"
+    },
+    {
+      "id": "proj-07",
+      "title": "Complete Game: Small Scope",
+      "description": "Build a complete, polished game from start to finish. Include all systems: gameplay, UI, audio, save/load, and export for distribution.",
+      "prerequisites": ["shipping-01", "game-02", "game-07", "ui-01", "2d-01"],
+      "checklist": [
+        "Design complete game concept",
+        "Implement all core gameplay",
+        "Create full UI system",
+        "Add audio (music and SFX)",
+        "Implement save/load",
+        "Polish and bug fixing",
+        "Export and test on target platform",
+        "Create store page or release materials"
+      ],
+      "scope": "Large project: complete game, 20-40 hours"
+    }
+  ]
+}
