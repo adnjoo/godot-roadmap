@@ -1,76 +1,134 @@
+"use client";
+
+import Image from "next/image";
 import Link from "next/link";
+import { Github } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="border-t bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 mt-auto">
-      <div className="container py-10">
-        <div className="flex flex-col md:flex-row gap-8 items-start">
-          {/* Copyright */}
-          <div className="text-sm text-muted-foreground">
-            <span>© {new Date().getFullYear()} Godot Roadmap</span>
+    <footer className="bg-background border-t mt-20 py-12 text-foreground text-sm">
+      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Column 1: Branding + Socials */}
+        <div className="flex flex-col gap-4 sm:-mt-6">
+          <Link href="/" className="flex items-center gap-2">
+            <Image
+              src="/Godot_icon.svg.png"
+              alt="Godot Roadmap logo"
+              width={40}
+              height={40}
+              className="dark:invert"
+            />
+            <span className="text-xl font-bold">Godot Roadmap</span>
+          </Link>
+          <div className="text-muted-foreground">
+            A comprehensive guide to mastering Godot game development.
           </div>
-
-          {/* Sections Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 flex-1">
-            {/* Explore Section */}
-            <div className="flex flex-col gap-4">
-              <h3 className="font-semibold text-foreground">Explore</h3>
-              <div className="flex flex-col gap-3 text-sm text-muted-foreground">
-                <Link href="/roadmap" className="hover:text-foreground transition-colors">
-                  Roadmap
-                </Link>
-                <Link href="/projects" className="hover:text-foreground transition-colors">
-                  Projects
-                </Link>
-                <Link href="/glossary" className="hover:text-foreground transition-colors">
-                  Glossary
-                </Link>
-                <Link href="/resources" className="hover:text-foreground transition-colors">
-                  Resources
-                </Link>
-              </div>
-            </div>
-
-            {/* Learn Section */}
-            <div className="flex flex-col gap-4">
-              <h3 className="font-semibold text-foreground">Learn</h3>
-              <div className="flex flex-col gap-3 text-sm text-muted-foreground">
-                <Link href="/resources" className="hover:text-foreground transition-colors">
-                  Learning Resources
-                </Link>
-                <Link href="/glossary" className="hover:text-foreground transition-colors">
-                  Glossary
-                </Link>
-                <Link href="/roadmap" className="hover:text-foreground transition-colors">
-                  Learning Path
-                </Link>
-              </div>
-            </div>
-
-            {/* Community Section */}
-            <div className="flex flex-col gap-4">
-              <h3 className="font-semibold text-foreground">Community</h3>
-              <div className="flex flex-col gap-3 text-sm text-muted-foreground">
-                <a
-                  href="https://github.com/adnjoo/godot-roadmap"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-foreground transition-colors"
-                >
-                  GitHub
-                </a>
-                <a
-                  href="https://godotengine.org"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-foreground transition-colors"
-                >
-                  Godot Engine
-                </a>
-              </div>
-            </div>
+          <div className="flex gap-4 mt-2 text-muted-foreground">
+            <Link
+              href="https://github.com/adnjoo/godot-roadmap"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <Github className="w-5 h-5 hover:text-foreground transition" />
+            </Link>
+            <Link
+              href="https://godotengine.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Godot Engine"
+            >
+              <Image
+                src="/Godot_icon.svg.png"
+                alt="Godot Engine"
+                width={20}
+                height={20}
+                className="dark:invert hover:opacity-80 transition"
+              />
+            </Link>
           </div>
         </div>
+
+        {/* Column 2: Navigation */}
+        <div>
+          <p className="font-semibold mb-3">Navigation</p>
+          <ul className="space-y-2 text-muted-foreground">
+            <li>
+              <Link href="/roadmap" className="hover:underline hover:text-foreground transition">
+                Roadmap
+              </Link>
+            </li>
+            <li>
+              <Link href="/projects" className="hover:underline hover:text-foreground transition">
+                Projects
+              </Link>
+            </li>
+            <li>
+              <Link href="/glossary" className="hover:underline hover:text-foreground transition">
+                Glossary
+              </Link>
+            </li>
+            <li>
+              <Link href="/resources" className="hover:underline hover:text-foreground transition">
+                Resources
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        {/* Column 3: Learn */}
+        <div>
+          <p className="font-semibold mb-3">Learn</p>
+          <ul className="space-y-2 text-muted-foreground">
+            <li>
+              <Link href="/resources" className="hover:underline hover:text-foreground transition">
+                Learning Resources
+              </Link>
+            </li>
+            <li>
+              <Link href="/glossary" className="hover:underline hover:text-foreground transition">
+                Glossary
+              </Link>
+            </li>
+            <li>
+              <Link href="/roadmap" className="hover:underline hover:text-foreground transition">
+                Learning Path
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        {/* Column 4: Community */}
+        <div>
+          <p className="font-semibold mb-3">Community</p>
+          <ul className="space-y-2 text-muted-foreground">
+            <li>
+              <Link
+                href="https://github.com/adnjoo/godot-roadmap"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline hover:text-foreground transition"
+              >
+                GitHub
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="https://godotengine.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline hover:text-foreground transition"
+              >
+                Godot Engine
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Bottom Copyright Bar */}
+      <div className="mt-12 border-t pt-6 text-center text-muted-foreground text-xs">
+        © {new Date().getFullYear()} Godot Roadmap. All rights reserved.
       </div>
     </footer>
   );
