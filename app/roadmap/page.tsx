@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useCallback, useEffect } from "react";
+import { Suspense, useState, useMemo, useCallback, useEffect } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { useRoadmap } from "@/lib/store/RoadmapContext";
 import { StickyProgressBar } from "@/components/roadmap/StickyProgressBar";
@@ -15,7 +15,8 @@ import type { Difficulty, Category } from "@/lib/store/RoadmapContext";
 
 const roadmapData = roadmapDataRaw as RoadmapData;
 
-export default function RoadmapPage() {
+// Component that handles URL sync logic (needs Suspense)
+function RoadmapPageContent() {
   const { completedItems, filters, updateFilters } = useRoadmap();
   const [activeSection, setActiveSection] = useState<string | undefined>();
   const searchParams = useSearchParams();
@@ -46,7 +47,8 @@ export default function RoadmapPage() {
     if (Object.keys(updates).length > 0) {
       updateFilters(updates);
     }
-  }, []); // Only run on mount
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // Only run on mount - searchParams and updateFilters are stable
 
   // Sync filters to URL params
   const handleFiltersChange = useCallback(
@@ -212,5 +214,20 @@ export default function RoadmapPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+// Main page component with Suspense boundary
+export default function RoadmapPage() {
+  return (
+    <Suspense fallback={
+      <div className="container py-6">
+        <div className="flex items-center justify-center min-h-[400px]">
+          <div className="text-muted-foreground">Loading roadmap...</div>
+        </div>
+      </div>
+    }>
+      <RoadmapPageContent />
+    </Suspense>
   );
 }

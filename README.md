@@ -5,7 +5,7 @@ Go from absolute beginner → confident game dev with **60+ curated learning ite
 
 👉 **Live app:** [https://godot-roadmap.vercel.app/roadmap](https://godot-roadmap.vercel.app/roadmap)
 
-![Screenshot](./public/screen-2.png)
+![Screenshot](./public/screen-3.png)
 
 ✨ **Features**
 
