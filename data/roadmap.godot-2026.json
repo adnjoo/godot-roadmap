@@ -959,7 +959,7 @@
       "prerequisites": ["shipping-01"],
       "resources": [
         { "label": "Itch.io Game Jams", "url": "https://itch.io/jams" },
-        { "label": "Godot Wild Jam", "url": "https://itch.io/jam/godot-wild-jam" }
+        { "label": "Godot Wild Jam", "url": "https://godotwildjam.com/" }
       ],
       "keywords": ["game jam", "shipping", "scope", "deadline", "itch.io"]
     },
