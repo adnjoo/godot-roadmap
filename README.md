@@ -1,46 +1,96 @@
 # Godot Game Developer Roadmap (2026)
 
-A comprehensive learning path for game developers who want to master Godot. This roadmap guides you from absolute beginner to advanced game developer with 60+ learning items and 7 practice projects.
+A structured learning path for developers who want to *actually* get good at Godot.
+Go from absolute beginner → confident game dev with **60+ curated learning items** and **7 hands-on projects**.
+
+👉 **Live app:** [https://godot-roadmap.vercel.app/roadmap](https://godot-roadmap.vercel.app/roadmap)
+
+✨ **Features**
+
+* Dark mode (system + manual toggle)
+* Progress tracking (saved locally)
+* Filters by difficulty & category
+* Fast search
+* Mobile friendly
+
+---
+
+## Why I Built This
+
+Godot docs are powerful… but overwhelming when you're starting out.
+I wanted a **clear path** I could follow myself — and decided to share it publicly.
+
+This roadmap focuses on:
+
+* learning by *building*
+* avoiding tutorial hell
+* shipping small projects early
+
+---
 
 ## What You'll Learn
 
-This roadmap covers everything you need to build games with Godot, organized into 9 progressive sections:
+Organized into **9 progressive sections**:
 
-1. **Foundations**: Master the core concepts—nodes, scenes, input handling, signals, and resources. Build your first playable prototype.
+1. **Foundations**
+   Nodes, scenes, input, signals, resources. Build your first playable prototype.
 
-2. **2D Essentials**: Create engaging 2D games with sprites, tilemaps, collision detection, physics, and animation systems.
+2. **2D Essentials**
+   Sprites, tilemaps, collisions, physics, animations.
 
-3. **UI Systems**: Design polished interfaces using Control nodes, themes, containers, and dialogs for menus, HUDs, and game UI.
+3. **UI Systems**
+   Menus, HUDs, dialogs, themes, layout containers.
 
-4. **Game Systems**: Implement robust game architecture with state machines, save/load systems, event management, and data-driven design.
+4. **Game Systems**
+   State machines, save/load, events, data-driven design.
 
-5. **Content Pipeline**: Organize and manage assets efficiently, configure import settings, and build scalable project structures.
+5. **Content Pipeline**
+   Asset organization, imports, scalable project structure.
 
-6. **Tools & Automation**: Extend Godot with editor scripts, plugins, and export presets to streamline your workflow.
+6. **Tools & Automation**
+   Editor scripts, plugins, export presets.
 
-7. **Performance & Optimization**: Profile your games, optimize draw calls, improve physics performance, and ensure smooth gameplay.
+7. **Performance & Optimization**
+   Profiling, draw calls, physics optimization.
 
-8. **Shipping & Distribution**: Prepare your game for release with proper export settings, and learn to publish on itch.io and Steam.
+8. **Shipping & Distribution**
+   Exporting, publishing to itch.io & Steam.
 
-9. **Advanced Topics**: Explore multiplayer networking, shaders, 3D game development, and custom rendering techniques.
+9. **Advanced Topics**
+   Multiplayer, shaders, 3D, custom rendering.
+
+---
 
 ## Practice Projects
 
-Complete 7 hands-on projects that reinforce your learning:
-- Each project maps to specific roadmap milestones
-- Prerequisites ensure you're ready before starting
-- Checklists guide you through implementation
-- Projects range from simple prototypes to full game systems
+7 hands-on projects that reinforce learning:
 
-## How to Use This Roadmap
+* Each maps to roadmap milestones
+* Clear prerequisites
+* Step-by-step checklists
+* From small prototypes → real systems
 
-1. Start with the **Foundations** section and work through items sequentially
-2. Mark items as complete as you finish them to track your progress
-3. Use filters to focus on specific topics (difficulty, category, completion status)
-4. Search for keywords when you need to find specific concepts
-5. Complete practice projects when you've finished their prerequisites
-6. Your progress is automatically saved in your browser
+---
 
-## Getting Started
+## How to Use
 
-Visit the roadmap to begin your Godot learning journey. No installation required—just open the app and start learning!
+1. Start with **Foundations**
+2. Work sequentially
+3. Mark items complete
+4. Use filters + search
+5. Build the projects
+6. Progress saves automatically in your browser
+
+---
+
+## Feedback
+
+Have ideas? Found a bug?
+
+* Open an issue
+* Or message me on Reddit / GitHub
+
+If this helped you:
+
+* ⭐ Star the repo
+* Share it with other Godot learners

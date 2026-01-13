@@ -15,6 +15,7 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
+import { ModeToggle } from "@/components/mode-toggle";
 
 export function Header() {
   const { resetProgress } = useRoadmap();
@@ -32,6 +33,7 @@ export function Header() {
           <Link href="/projects">
             <Button variant="ghost">Projects</Button>
           </Link>
+          <ModeToggle />
           <AlertDialog>
             <AlertDialogTrigger asChild>
               <Button variant="ghost" size="icon" title="Reset progress">
