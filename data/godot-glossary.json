@@ -1,0 +1,436 @@
+{
+  "version": "4.x",
+  "description": "Practical Godot glossary covering core vocabulary for Godot 4.x development",
+  "categories": [
+    {
+      "id": "core-concepts",
+      "title": "Core Concepts",
+      "terms": [
+        {
+          "term": "Project",
+          "definition": "A game/app folder with project.godot at the root."
+        },
+        {
+          "term": "Scene",
+          "definition": "A reusable \"thing\" made of nodes (like a prefab). Saved as .tscn / .scn."
+        },
+        {
+          "term": "Node",
+          "definition": "The basic building block. Everything in a scene tree is a node."
+        },
+        {
+          "term": "Scene Tree",
+          "definition": "The runtime hierarchy of nodes (your running world)."
+        },
+        {
+          "term": "Tree (SceneTree)",
+          "definition": "The engine object managing your running scenes; accessible via get_tree()."
+        },
+        {
+          "term": "PackedScene",
+          "definition": "A saved scene you can instantiate at runtime."
+        },
+        {
+          "term": "Instance / Instantiate",
+          "definition": "Creating a runtime copy of a scene (Godot 4 uses instantiate())."
+        },
+        {
+          "term": "Owner",
+          "definition": "A node's \"scene ownership\" for saving/exporting parts of a tree into a scene file."
+        },
+        {
+          "term": "Unique Name",
+          "definition": "A node can be marked unique for %NodeName access (Godot 4 feature)."
+        }
+      ]
+    },
+    {
+      "id": "node-types",
+      "title": "Node Types You'll See Constantly",
+      "terms": [
+        {
+          "term": "Node",
+          "definition": "Base class, no transform."
+        },
+        {
+          "term": "Node2D",
+          "definition": "2D transform (position/rotation/scale)."
+        },
+        {
+          "term": "Control",
+          "definition": "UI node (layout + anchors/margins)."
+        },
+        {
+          "term": "Node3D",
+          "definition": "3D transform."
+        },
+        {
+          "term": "CanvasItem",
+          "definition": "Base for 2D drawables (Node2D + Control inherit this)."
+        },
+        {
+          "term": "Viewport",
+          "definition": "A render target (main screen is a viewport; can make your own)."
+        },
+        {
+          "term": "CanvasLayer",
+          "definition": "Draw UI/2D on a separate layer (good for HUD)."
+        }
+      ]
+    },
+    {
+      "id": "resources-assets",
+      "title": "Resources and Assets",
+      "terms": [
+        {
+          "term": "Resource",
+          "definition": "Data object that can be saved/loaded (.tres, .res). Materials, scripts, animations, etc."
+        },
+        {
+          "term": ".tres vs .res",
+          "definition": "Text vs binary resource formats."
+        },
+        {
+          "term": "Texture2D / SpriteFrames / Material",
+          "definition": "Common resource types."
+        },
+        {
+          "term": "Theme",
+          "definition": "UI styling resource for Control nodes."
+        },
+        {
+          "term": "Import settings",
+          "definition": "Godot's asset import pipeline (textures, audio, models)."
+        }
+      ]
+    },
+    {
+      "id": "scripts-code",
+      "title": "Scripts & Code",
+      "terms": [
+        {
+          "term": "GDScript",
+          "definition": "Godot's built-in scripting language."
+        },
+        {
+          "term": "C#",
+          "definition": "Supported via .NET (depending on your export setup)."
+        },
+        {
+          "term": "Native / GDExtension",
+          "definition": "C++ extensions system (replaces old GDNative)."
+        },
+        {
+          "term": "Class / extends",
+          "definition": "Script inheritance (extends Node2D, etc.)."
+        },
+        {
+          "term": "@export",
+          "definition": "Exposes a variable in the Inspector."
+        },
+        {
+          "term": "@onready",
+          "definition": "Assign after the node enters the scene tree (when children exist)."
+        },
+        {
+          "term": "Signal",
+          "definition": "Event system (emit/subscribe)."
+        },
+        {
+          "term": "Callable",
+          "definition": "A function reference you can store/pass."
+        },
+        {
+          "term": "Variant",
+          "definition": "Godot's dynamic value type (can hold many kinds of data)."
+        },
+        {
+          "term": "Built-in types",
+          "definition": "Vector2, Vector3, Transform2D, Transform3D, Color, Rect2, etc."
+        }
+      ]
+    },
+    {
+      "id": "lifecycle-callbacks",
+      "title": "Lifecycle Callbacks",
+      "terms": [
+        {
+          "term": "_init()",
+          "definition": "Constructor-like initialization."
+        },
+        {
+          "term": "_enter_tree()",
+          "definition": "Called when added to the scene tree."
+        },
+        {
+          "term": "_ready()",
+          "definition": "Called when node + children are ready."
+        },
+        {
+          "term": "_process(delta)",
+          "definition": "Every frame (render frame)."
+        },
+        {
+          "term": "_physics_process(delta)",
+          "definition": "Fixed timestep (physics)."
+        },
+        {
+          "term": "_input(event)",
+          "definition": "Raw input events."
+        },
+        {
+          "term": "_unhandled_input(event)",
+          "definition": "Input not consumed by UI/others."
+        }
+      ]
+    },
+    {
+      "id": "messaging-communication",
+      "title": "Messaging & Communication",
+      "terms": [
+        {
+          "term": "Signals (connect/emit)",
+          "definition": "Decoupled communication."
+        },
+        {
+          "term": "Groups",
+          "definition": "Tag nodes to broadcast calls (get_tree().call_group())."
+        },
+        {
+          "term": "Autoload / Singleton",
+          "definition": "A scene/script loaded once and globally accessible."
+        }
+      ]
+    },
+    {
+      "id": "2d-movement-physics",
+      "title": "2D Movement & Physics",
+      "terms": [
+        {
+          "term": "CharacterBody2D",
+          "definition": "Kinematic-style movement with move_and_slide()."
+        },
+        {
+          "term": "RigidBody2D",
+          "definition": "Physics-simulated body (forces/impulses)."
+        },
+        {
+          "term": "StaticBody2D",
+          "definition": "Doesn't move (walls/floors)."
+        },
+        {
+          "term": "Area2D",
+          "definition": "Detection/overlaps/triggers."
+        },
+        {
+          "term": "CollisionShape2D / CollisionPolygon2D",
+          "definition": "Defines collision geometry."
+        },
+        {
+          "term": "PhysicsMaterial",
+          "definition": "Friction/bounce."
+        },
+        {
+          "term": "Layers & Masks",
+          "definition": "\"What am I?\" (layer) and \"what do I collide with?\" (mask)."
+        },
+        {
+          "term": "RayCast2D / ShapeCast2D",
+          "definition": "Queries for collision checks."
+        },
+        {
+          "term": "DirectSpaceState",
+          "definition": "Advanced physics queries API."
+        }
+      ]
+    },
+    {
+      "id": "3d-basics",
+      "title": "3D Basics (Same Ideas, 3D Names)",
+      "terms": [
+        {
+          "term": "CharacterBody3D / RigidBody3D / StaticBody3D / Area3D",
+          "definition": "3D equivalents of 2D physics bodies."
+        },
+        {
+          "term": "CollisionShape3D",
+          "definition": "3D collision geometry."
+        },
+        {
+          "term": "MeshInstance3D",
+          "definition": "A visible 3D mesh."
+        },
+        {
+          "term": "Camera3D / DirectionalLight3D / OmniLight3D",
+          "definition": "3D camera and lighting nodes."
+        },
+        {
+          "term": "NavigationRegion3D / NavMesh",
+          "definition": "Pathfinding."
+        }
+      ]
+    },
+    {
+      "id": "animation",
+      "title": "Animation",
+      "terms": [
+        {
+          "term": "AnimationPlayer",
+          "definition": "Plays keyframed animations."
+        },
+        {
+          "term": "AnimationTree",
+          "definition": "Blending/state machines for animations."
+        },
+        {
+          "term": "Tween",
+          "definition": "Code-driven interpolation (\"animate this value over time\")."
+        },
+        {
+          "term": "Skeleton2D / Skeleton3D",
+          "definition": "Bone-based animation."
+        }
+      ]
+    },
+    {
+      "id": "input",
+      "title": "Input",
+      "terms": [
+        {
+          "term": "InputMap",
+          "definition": "Named actions (recommended)."
+        },
+        {
+          "term": "Input.is_action_pressed()",
+          "definition": "Query actions."
+        },
+        {
+          "term": "Events",
+          "definition": "InputEventKey, InputEventMouseButton, etc."
+        }
+      ]
+    },
+    {
+      "id": "ui-control",
+      "title": "UI (Control)",
+      "terms": [
+        {
+          "term": "Anchors/Margins",
+          "definition": "How UI positions/sizes relative to parent."
+        },
+        {
+          "term": "Containers",
+          "definition": "Auto-layout (HBox/VBox/GridContainer, etc.)."
+        },
+        {
+          "term": "Focus",
+          "definition": "Keyboard/controller navigation."
+        },
+        {
+          "term": "Theme Overrides",
+          "definition": "Per-node styling adjustments."
+        }
+      ]
+    },
+    {
+      "id": "rendering-visuals",
+      "title": "Rendering & Visuals",
+      "terms": [
+        {
+          "term": "Sprite2D",
+          "definition": "Draw a texture in 2D."
+        },
+        {
+          "term": "AnimatedSprite2D",
+          "definition": "Frame animation (SpriteFrames resource)."
+        },
+        {
+          "term": "TileMap / TileSet",
+          "definition": "Grid-based level building (Godot 4 TileMap workflow)."
+        },
+        {
+          "term": "Particles2D / GPUParticles2D",
+          "definition": "Particle systems."
+        },
+        {
+          "term": "Shaders (ShaderMaterial)",
+          "definition": "Custom GPU code for effects."
+        },
+        {
+          "term": "Z-index / Y-sort",
+          "definition": "Draw order controls."
+        }
+      ]
+    },
+    {
+      "id": "data-saving",
+      "title": "Data & Saving",
+      "terms": [
+        {
+          "term": "ConfigFile",
+          "definition": "Simple INI-like save."
+        },
+        {
+          "term": "FileAccess",
+          "definition": "Read/write files."
+        },
+        {
+          "term": "JSON",
+          "definition": "Common data format."
+        },
+        {
+          "term": "Resource saving",
+          "definition": "You can save custom Resources too (great for item databases)."
+        }
+      ]
+    },
+    {
+      "id": "editor-words",
+      "title": "Editor Words",
+      "terms": [
+        {
+          "term": "Inspector",
+          "definition": "Where you edit node properties."
+        },
+        {
+          "term": "Dock",
+          "definition": "Panels (Scene, FileSystem, Inspector, etc.)."
+        },
+        {
+          "term": "Remote",
+          "definition": "Scene tree view of the running game."
+        },
+        {
+          "term": "Gizmos",
+          "definition": "Editor helpers for transforms/handles."
+        },
+        {
+          "term": "Export Presets",
+          "definition": "Packaging for Windows/macOS/Linux/Web/Android/iOS."
+        }
+      ]
+    },
+    {
+      "id": "performance-words",
+      "title": "Performance Words",
+      "terms": [
+        {
+          "term": "Delta",
+          "definition": "Time since last frame (for frame-rate independent motion)."
+        },
+        {
+          "term": "Fixed timestep",
+          "definition": "Physics tick rate."
+        },
+        {
+          "term": "Batching",
+          "definition": "Rendering optimization."
+        },
+        {
+          "term": "Profiler / Monitor",
+          "definition": "Built-in performance tools."
+        }
+      ]
+    }
+  ]
+}
