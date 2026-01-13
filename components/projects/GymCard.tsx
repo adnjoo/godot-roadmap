@@ -27,7 +27,7 @@ export function GymCard() {
               </div>
               <p className="text-sm text-muted-foreground">
                 🌱 This is a long-term mastery path<br />
-                You don't need to finish all 200 projects.<br />
+                You don&apos;t need to finish all 200 projects.<br />
                 Pick what interests you, skip freely, and come back anytime.
               </p>
             </div>
