@@ -10,6 +10,8 @@ import { ExternalLink, Clock } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import type { Difficulty, Category } from "@/lib/store/RoadmapContext";
+import roadmapDataRaw from "@/data/roadmap.godot-2026.json";
+import type { RoadmapData } from "@/types/roadmap";
 
 interface RoadmapItem {
   id: string;
@@ -28,11 +30,20 @@ interface RoadmapItemCardProps {
   canStart: boolean;
 }
 
+const roadmapData = roadmapDataRaw as RoadmapData;
+
 export function RoadmapItemCard({ item, canStart }: RoadmapItemCardProps) {
   const { completedItems, toggleItem } = useRoadmap();
   const isCompleted = completedItems.has(item.id);
   const [isAccordionOpen, setIsAccordionOpen] = useState(false);
   const isActive = isAccordionOpen && canStart && !isCompleted;
+
+  // Get prerequisite titles from IDs
+  const getPrerequisiteTitles = (prerequisiteIds: string[]): string[] => {
+    return prerequisiteIds
+      .map((id) => roadmapData.items.find((item) => item.id === id)?.title)
+      .filter((title): title is string => title !== undefined);
+  };
 
   const difficultyColors = {
     Beginner: "bg-[hsl(var(--cyber-green))]/10 text-[hsl(var(--cyber-green))] border-[hsl(var(--cyber-green))]/30",
@@ -48,8 +59,21 @@ export function RoadmapItemCard({ item, canStart }: RoadmapItemCardProps) {
     Tools: "bg-[hsl(var(--cyber-cyan))]/10 text-[hsl(var(--cyber-cyan))] border-[hsl(var(--cyber-cyan))]/30",
   };
 
+  const scrollToPrerequisite = (prerequisiteId: string) => {
+    const element = document.getElementById(`roadmap-item-${prerequisiteId}`);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "center" });
+      // Add a highlight effect
+      element.classList.add("ring-2", "ring-[hsl(var(--cyber-cyan))]", "ring-offset-2");
+      setTimeout(() => {
+        element.classList.remove("ring-2", "ring-[hsl(var(--cyber-cyan))]", "ring-offset-2");
+      }, 2000);
+    }
+  };
+
   return (
     <Card
+      id={`roadmap-item-${item.id}`}
       className={cn(
         "relative transition-all duration-300 cyber-scanline",
         "dark:bg-[hsl(var(--cyber-dark))] dark:border-[hsl(var(--cyber-cyan))]/20",
@@ -104,7 +128,6 @@ export function RoadmapItemCard({ item, canStart }: RoadmapItemCardProps) {
                     "outline outline-2 outline-[hsl(var(--cyber-green))] outline-offset-0 rounded-sm"
                   ]
                 )}
-                style={isCompleted ? { outlineOpacity: 0.5 } : undefined}
               />
             </div>
             <div className="flex-1">
@@ -184,7 +207,27 @@ export function RoadmapItemCard({ item, canStart }: RoadmapItemCardProps) {
             "dark:text-[hsl(var(--cyber-amber))]",
             "text-amber-700"
           )}>
-            Requires: {item.prerequisites.length} prerequisite(s)
+            Requires:{" "}
+            {item.prerequisites.map((prerequisiteId, index) => {
+              const prerequisiteItem = roadmapData.items.find((item) => item.id === prerequisiteId);
+              if (!prerequisiteItem) return null;
+              return (
+                <span key={prerequisiteId}>
+                  {index > 0 && ", "}
+                  <button
+                    onClick={() => scrollToPrerequisite(prerequisiteId)}
+                    className={cn(
+                      "underline underline-offset-2 hover:underline-offset-4 transition-all",
+                      "hover:dark:text-[hsl(var(--cyber-cyan))]",
+                      "hover:text-blue-600",
+                      "cursor-pointer"
+                    )}
+                  >
+                    {prerequisiteItem.title}
+                  </button>
+                </span>
+              );
+            })}
           </div>
         )}
 
