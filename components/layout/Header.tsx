@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useRoadmap } from "@/lib/store/RoadmapContext";
 import { Button } from "@/components/ui/button";
 import { RotateCcw } from "lucide-react";
@@ -21,9 +22,16 @@ export function Header() {
   const { resetProgress } = useRoadmap();
 
   return (
-    <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
+          <Image
+            src="/Godot_icon.svg.png"
+            alt="Godot Engine"
+            width={24}
+            height={24}
+            className="h-6 w-6"
+          />
           <span className="text-xl font-bold">Godot Roadmap</span>
         </Link>
         <nav className="flex items-center gap-4">
