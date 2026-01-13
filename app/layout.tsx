@@ -11,8 +11,9 @@ import { Analytics } from "@vercel/analytics/next";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Godot Game Developer Roadmap (2026)",
-  description: "A comprehensive roadmap for learning Godot game development",
+  title: "Godot Game Developer Roadmap (2026) - Unofficial",
+  description:
+    "An unofficial, community-made learning roadmap for Godot game development. Track your progress and build projects.",
 };
 
 export default function RootLayout({

@@ -15,8 +15,8 @@ export default function Home() {
             Roadmap (2026)
           </h2>
           <p className="max-w-2xl mx-auto text-lg text-muted-foreground">
-            A comprehensive, step-by-step guide to mastering Godot game development. Track your
-            progress, build projects, and learn at your own pace.
+            An unofficial, community-made learning roadmap. Track your progress, build projects, and learn at
+            your own pace.
           </p>
         </div>
         <div className="flex flex-col sm:flex-row gap-4">
@@ -29,7 +29,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <div className="flex flex-col gap-4 mx-auto max-w-2xl">
         <Card>
           <CardHeader>
             <Map className="h-8 w-8 mb-2 text-primary" />
@@ -57,36 +57,6 @@ export default function Home() {
           <CardContent>
             <Button asChild variant="outline" className="w-full">
               <Link href="/projects">View Projects</Link>
-            </Button>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader>
-            <BookOpen className="h-8 w-8 mb-2 text-primary" />
-            <CardTitle>Guides</CardTitle>
-            <CardDescription>
-              In-depth guides and tutorials for specific topics. Coming soon.
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <Button variant="outline" className="w-full" disabled>
-              Coming Soon
-            </Button>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader>
-            <HelpCircle className="h-8 w-8 mb-2 text-primary" />
-            <CardTitle>FAQ</CardTitle>
-            <CardDescription>
-              Frequently asked questions about the roadmap and learning path. Coming soon.
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <Button variant="outline" className="w-full" disabled>
-              Coming Soon
             </Button>
           </CardContent>
         </Card>

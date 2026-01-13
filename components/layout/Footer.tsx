@@ -18,10 +18,13 @@ export function Footer() {
               height={40}
               className="dark:invert"
             />
-            <span className="text-xl font-bold">Godot Roadmap</span>
+            <span className="text-xl font-bold">Godot Roadmap (Unofficial)</span>
           </Link>
           <div className="text-muted-foreground">
-            A comprehensive guide to mastering Godot game development.
+            A community-made learning roadmap for Godot Engine developers.
+          </div>
+          <div className="text-xs text-muted-foreground mt-2 space-y-1">
+            <p>Not affiliated with or endorsed by the Godot Foundation.</p>
           </div>
           <div className="flex gap-4 mt-2 text-muted-foreground">
             <Link
@@ -63,16 +66,6 @@ export function Footer() {
                 Projects
               </Link>
             </li>
-            <li>
-              <Link href="/glossary" className="hover:underline hover:text-foreground transition">
-                Glossary
-              </Link>
-            </li>
-            <li>
-              <Link href="/resources" className="hover:underline hover:text-foreground transition">
-                Resources
-              </Link>
-            </li>
           </ul>
         </div>
 
@@ -82,17 +75,12 @@ export function Footer() {
           <ul className="space-y-2 text-muted-foreground">
             <li>
               <Link href="/resources" className="hover:underline hover:text-foreground transition">
-                Learning Resources
+                Resources
               </Link>
             </li>
             <li>
               <Link href="/glossary" className="hover:underline hover:text-foreground transition">
                 Glossary
-              </Link>
-            </li>
-            <li>
-              <Link href="/roadmap" className="hover:underline hover:text-foreground transition">
-                Learning Path
               </Link>
             </li>
           </ul>
@@ -122,14 +110,20 @@ export function Footer() {
                 Godot Engine
               </Link>
             </li>
+            <li>
+              <Link
+                href="https://www.reddit.com/r/godot/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline hover:text-foreground transition"
+              >
+                r/godot
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
 
-      {/* Bottom Copyright Bar */}
-      <div className="mt-12 border-t pt-6 text-center text-muted-foreground text-xs">
-        © {new Date().getFullYear()} Godot Roadmap. All rights reserved.
-      </div>
     </footer>
   );
 }
