@@ -4,6 +4,7 @@ import { useMemo } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { useRouter } from "next/navigation";
 import { useLocalStorageState } from "@/lib/hooks/useLocalStorageState";
 import { Jam } from "@/types/jam-log";
@@ -49,8 +50,10 @@ export function GameJamLogCard() {
   }, [jams]);
 
   return (
-    <Card className="h-full flex flex-col hover:shadow-md transition-shadow">
-      <CardHeader>
+    <div className="relative rounded-lg">
+      <GlowingEffect disabled={false} proximity={50} spread={40} />
+      <Card className="h-full flex flex-col relative hover:shadow-md transition-shadow">
+        <CardHeader>
         <CardTitle className="font-semibold text-lg">Game Jam Log</CardTitle>
         <CardDescription>
           Track the game jams you&apos;ve joined and reflect on what you learned.
@@ -101,6 +104,7 @@ export function GameJamLogCard() {
         </Button>
         <p className="text-xs text-muted-foreground text-center">Saved locally</p>
       </CardFooter>
-    </Card>
+      </Card>
+    </div>
   );
 }

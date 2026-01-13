@@ -11,6 +11,7 @@ import { CheckCircle2, Circle, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 import roadmapData from "@/data/roadmap.godot-2026.json";
 import Link from "next/link";
+import { GlowingEffect } from "@/components/ui/glowing-effect";
 
 interface Project {
   id: string;
@@ -52,8 +53,10 @@ export function ProjectCard({ project }: ProjectCardProps) {
   };
 
   return (
-    <Card className={cn("h-full flex flex-col", isCompleted && "opacity-75 border-primary/50")}>
-      <CardHeader>
+    <div className="relative rounded-lg">
+      <GlowingEffect disabled={false} proximity={50} spread={40} />
+      <Card className={cn("h-full flex flex-col relative", isCompleted && "opacity-75 border-primary/50")}>
+        <CardHeader>
         <div className="flex items-start justify-between gap-2">
           <div className="flex-1">
             <div className="flex items-center gap-2 mb-2">
@@ -176,6 +179,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           </Button>
         )}
       </CardFooter>
-    </Card>
+      </Card>
+    </div>
   );
 }
