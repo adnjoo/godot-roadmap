@@ -1059,83 +1059,9 @@
     }
   ],
   "projects": [
-    {
-      "id": "proj-01",
-      "title": "Tiny Platformer",
-      "description": "Create a simple 2D platformer with a player character that can move, jump, and collect items. Focus on basic movement, collisions, and level design.",
-      "prerequisites": ["found-01", "found-03", "found-04", "2d-01", "2d-02", "2d-04", "2d-05", "2d-09"],
-      "checklist": [
-        "Set up player scene with CharacterBody2D",
-        "Implement horizontal movement and jumping",
-        "Create a simple level with platforms",
-        "Add collectible items",
-        "Implement basic camera follow",
-        "Add simple UI for score"
-      ],
-      "scope": "Small project: 1-2 levels, basic mechanics, 4-6 hours"
-    },
+
     {
       "id": "proj-02",
-      "title": "Rooftop Farm Prototype",
-      "description": "Build a farming game prototype with planting, harvesting, and inventory management. Practice UI design, state management, and data persistence.",
-      "prerequisites": ["2d-01", "2d-02", "ui-01", "ui-02", "ui-03", "game-04", "game-05"],
-      "checklist": [
-        "Design farm grid system",
-        "Implement planting and harvesting mechanics",
-        "Create inventory UI",
-        "Add day/night cycle",
-        "Implement save/load system",
-        "Create crop growth system"
-      ],
-      "scope": "Medium project: core mechanics, multiple systems, 8-12 hours"
-    },
-    {
-      "id": "proj-03",
-      "title": "Top-down Explorer",
-      "description": "Create a top-down exploration game with character movement, world interaction, and simple quest system. Practice camera controls and world design.",
-      "prerequisites": ["2d-01", "2d-02", "2d-04", "2d-05", "2d-09", "ui-01", "game-06"],
-      "checklist": [
-        "Set up top-down character movement",
-        "Create explorable world with multiple areas",
-        "Implement interaction system",
-        "Add simple quest/objective tracking",
-        "Design world with tilemaps",
-        "Add minimap or world map"
-      ],
-      "scope": "Medium project: multiple areas, quest system, 10-15 hours"
-    },
-    {
-      "id": "proj-04",
-      "title": "Mini Game: Menu Tycoon",
-      "description": "Design the full menu system for a fictional game. Build a polished main menu, settings screen, and pause menu with smooth transitions and professional UI feel.",
-      "prerequisites": ["ui-01", "ui-02", "ui-03", "ui-05", "ui-06", "ui-09"],
-      "checklist": [
-        "Design animated main menu for a fake game",
-        "Create settings screen (audio/video/keybinds)",
-        "Build in-game pause menu",
-        "Implement global theme + typography system",
-        "Add smooth transitions between all screens",
-        "Test responsive layouts (720p → 4K)"
-      ],
-      "scope": "Mini-game: UI mastery challenge, 4–6 hours"
-    },
-    {
-      "id": "proj-05",
-      "title": "Mini Game: Chaos Lab",
-      "description": "A physics toybox where players experiment with objects, forces, and puzzles. Focus on fun emergent behavior.",
-      "prerequisites": ["2d-06", "2d-04", "found-04"],
-      "checklist": [
-        "Create stackable and destructible physics objects",
-        "Implement push/pull/launch mechanics",
-        "Add interactive elements (buttons, levers)",
-        "Design 3 small physics puzzles",
-        "Add impact VFX + sound feedback",
-        "Experiment with friction, bounce, mass"
-      ],
-      "scope": "Mini-game: physics sandbox, 4–6 hours"
-    },
-    {
-      "id": "proj-06",
       "title": "Mini Game: Mood Creature",
       "description": "A tiny character that reacts emotionally to player input. Focus on animation states, transitions, and juice.",
       "prerequisites": ["2d-07", "2d-08", "2d-12"],
@@ -1150,8 +1076,98 @@
       "scope": "Mini-game: animation feel test, 5–7 hours"
     },
     {
+      "id": "proj-01",
+      "title": "Mini Game: Chaos Lab",
+      "description": "A physics toybox where players experiment with objects, forces, and puzzles. Focus on fun emergent behavior.",
+      "prerequisites": ["2d-06", "2d-04", "found-04"],
+      "checklist": [
+        "Create stackable and destructible physics objects",
+        "Implement push/pull/launch mechanics",
+        "Add interactive elements (buttons, levers)",
+        "Design 3 small physics puzzles",
+        "Add impact VFX + sound feedback",
+        "Experiment with friction, bounce, mass"
+      ],
+      "scope": "Mini-game: physics sandbox, 4–6 hours"
+    },
+    {
+      "id": "proj-03",
+      "title": "Mini Game: Dash Lab",
+      "description": "Goal: Make movement feel good.",
+      "prerequisites": ["2d-05", "2d-09", "2d-12", "found-04"],
+      "checklist": [
+        "Implement dash ability (cooldown)",
+        "Add trail particles",
+        "Camera shake on dash",
+        "1 simple obstacle course",
+        "Timer (speedrun feel)",
+        "Restart button"
+      ],
+      "scope": "Mini-game: movement and camera mastery, 4–6 hours"
+    },
+    {
+      "id": "proj-04",
+      "title": "Practice Game: Tiny Platformer",
+      "description": "Create a simple 2D platformer with a player character that can move, jump, and collect items. Focus on basic movement, collisions, and level design.",
+      "prerequisites": ["found-01", "found-03", "found-04", "2d-01", "2d-02", "2d-04", "2d-05", "2d-09"],
+      "checklist": [
+        "Set up player scene with CharacterBody2D",
+        "Implement horizontal movement and jumping",
+        "Create a simple level with platforms",
+        "Add collectible items",
+        "Implement basic camera follow",
+        "Add simple UI for score"
+      ],
+      "scope": "Small project: 1-2 levels, basic mechanics, 4-6 hours"
+    },
+    {
+      "id": "proj-05",
+      "title": "Polish Sprint: Game Menus",
+      "description": "Focus on creating polished, professional game menus. Build main menu, settings, pause menu, and HUD with smooth transitions and consistent styling.",
+      "prerequisites": ["ui-01", "ui-02", "ui-03", "ui-05", "ui-06", "ui-09"],
+      "checklist": [
+        "Design animated main menu with transitions",
+        "Create comprehensive settings screen (audio/video/keybinds)",
+        "Build in-game pause menu system",
+        "Implement consistent theme and typography",
+        "Add smooth screen transitions and animations",
+        "Test responsive layouts across resolutions"
+      ],
+      "scope": "Polish sprint: UI/UX focus, 4–6 hours"
+    },
+    {
+      "id": "proj-06",
+      "title": "Practice Game: Rooftop Farm Prototype",
+      "description": "Build a farming game prototype with planting, harvesting, and inventory management. Practice UI design, state management, and data persistence.",
+      "prerequisites": ["2d-01", "2d-02", "ui-01", "ui-02", "ui-03", "game-04", "game-05"],
+      "checklist": [
+        "Design farm grid system",
+        "Implement planting and harvesting mechanics",
+        "Create inventory UI",
+        "Add day/night cycle",
+        "Implement save/load system",
+        "Create crop growth system"
+      ],
+      "scope": "Medium project: core mechanics, multiple systems, 8-12 hours"
+    },
+    {
       "id": "proj-07",
-      "title": "Full Game: Small Scope Ship",
+      "title": "Practice Game: Top-down Explorer",
+      "description": "Create a top-down exploration game with character movement, world interaction, and simple quest system. Practice camera controls and world design.",
+      "prerequisites": ["2d-01", "2d-02", "2d-04", "2d-05", "2d-09", "ui-01", "game-06"],
+      "checklist": [
+        "Set up top-down character movement",
+        "Create explorable world with multiple areas",
+        "Implement interaction system",
+        "Add simple quest/objective tracking",
+        "Design world with tilemaps",
+        "Add minimap or world map"
+      ],
+      "scope": "Medium project: multiple areas, quest system, 10-15 hours"
+    },
+    {
+      "id": "proj-08",
+      "title": "Capstone: 2D Shmup / Brawler",
       "description": "Build and ship a complete small game. Treat this like a real release: gameplay, UI, audio, saves, and export.",
       "prerequisites": ["shipping-01", "game-02", "game-07", "ui-01", "2d-01"],
       "checklist": [
