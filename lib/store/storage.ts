@@ -34,3 +34,30 @@ export function clearProgress(): void {
     console.error("Failed to clear progress:", error);
   }
 }
+
+const PROJECT_PROGRESS_STORAGE_KEY = "godot-roadmap:project-progress:v1";
+
+export interface ProjectProgressStorage {
+  completedChecklistItems: Record<string, number[]>;
+}
+
+export function saveProjectProgress(data: ProjectProgressStorage): void {
+  if (typeof window === "undefined") return;
+  try {
+    localStorage.setItem(PROJECT_PROGRESS_STORAGE_KEY, JSON.stringify(data));
+  } catch (error) {
+    console.error("Failed to save project progress:", error);
+  }
+}
+
+export function loadProjectProgress(): ProjectProgressStorage | null {
+  if (typeof window === "undefined") return null;
+  try {
+    const stored = localStorage.getItem(PROJECT_PROGRESS_STORAGE_KEY);
+    if (!stored) return null;
+    return JSON.parse(stored) as ProjectProgressStorage;
+  } catch (error) {
+    console.error("Failed to load project progress:", error);
+    return null;
+  }
+}

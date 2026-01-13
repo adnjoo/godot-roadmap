@@ -1,19 +1,19 @@
 "use client";
 
-import { useRoadmap } from "@/lib/store/RoadmapContext";
+import { useProjectProgress } from "@/lib/store/ProjectProgressContext";
 import { ProjectCard } from "./ProjectCard";
 import roadmapData from "@/data/roadmap.godot-2026.json";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export function ProjectList() {
-  const { completedProjects } = useRoadmap();
+  const { isProjectCompleted } = useProjectProgress();
 
   const allProjects = roadmapData.projects;
   const completedProjectsList = allProjects.filter((project) =>
-    completedProjects.has(project.id)
+    isProjectCompleted(project.id, project.checklist.length)
   );
   const remainingProjects = allProjects.filter(
-    (project) => !completedProjects.has(project.id)
+    (project) => !isProjectCompleted(project.id, project.checklist.length)
   );
 
   return (
