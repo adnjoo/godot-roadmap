@@ -966,18 +966,6 @@
     {
       "id": "shipping-06",
       "sectionId": "shipping",
-      "title": "Post-Jam Postmortem",
-      "summary": "Write a short postmortem: what worked, what didn't, and what you'd do differently. Extract 3 lessons for your next project.",
-      "difficulty": "Beginner",
-      "category": "Tools",
-      "estHours": 1,
-      "prerequisites": ["shipping-05"],
-      "resources": [],
-      "keywords": ["postmortem", "retrospective", "lessons learned", "reflection"]
-    },
-    {
-      "id": "shipping-07",
-      "sectionId": "shipping",
       "title": "Playtest & Feedback Loop",
       "summary": "Share a build, collect feedback from 3+ people, and implement at least one improvement based on what you learn.",
       "difficulty": "Intermediate",
@@ -990,7 +978,7 @@
       "keywords": ["playtest", "feedback", "iteration", "build"]
     },
     {
-      "id": "shipping-08",
+      "id": "shipping-07",
       "sectionId": "shipping",
       "title": "Release Notes / Devlog",
       "summary": "Write release notes or a devlog entry: what changed, what's next, and how to play. Practice communicating updates clearly.",
@@ -1000,20 +988,6 @@
       "prerequisites": ["shipping-02"],
       "resources": [],
       "keywords": ["devlog", "release notes", "communication", "updates"]
-    },
-    {
-      "id": "shipping-09",
-      "sectionId": "shipping",
-      "title": "Steam Page Setup (Coming Soon)",
-      "summary": "Create a Steam store page draft (capsules, description, tags) and understand wishlist mechanics. Optional but high leverage.",
-      "difficulty": "Intermediate",
-      "category": "Tools",
-      "estHours": 2,
-      "prerequisites": ["shipping-03"],
-      "resources": [
-        { "label": "Steamworks Documentation", "url": "https://partner.steamgames.com/doc/home" }
-      ],
-      "keywords": ["steam", "store page", "wishlists", "marketing"]
     },
     {
       "id": "adv-01",
