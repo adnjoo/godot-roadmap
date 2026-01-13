@@ -1,9 +1,11 @@
 "use client";
 
 import { useRoadmap } from "@/lib/store/RoadmapContext";
+import { useProjectProgress } from "@/lib/store/ProjectProgressContext";
 import { Card, CardContent, CardHeader, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CheckCircle2, Circle, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -24,8 +26,14 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
-  const { completedProjects, completedItems, toggleProject } = useRoadmap();
-  const isCompleted = completedProjects.has(project.id);
+  const { completedItems } = useRoadmap();
+  const {
+    isChecklistItemCompleted,
+    isProjectCompleted,
+    toggleChecklistItem,
+    markProjectComplete,
+  } = useProjectProgress();
+  const isCompleted = isProjectCompleted(project.id, project.checklist.length);
 
   // Check prerequisites
   const prerequisitesMet = project.prerequisites.every((prereq) =>
@@ -109,12 +117,29 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <div>
           <div className="text-sm font-medium mb-2">Project Checklist</div>
           <ul className="space-y-1.5">
-            {project.checklist.map((item, idx) => (
-              <li key={idx} className="flex items-start gap-2 text-sm">
-                <Circle className="h-4 w-4 mt-0.5 text-muted-foreground flex-shrink-0" />
-                <span>{item}</span>
-              </li>
-            ))}
+            {project.checklist.map((item, idx) => {
+              const itemCompleted = isChecklistItemCompleted(project.id, idx);
+              return (
+                <li
+                  key={idx}
+                  className="flex items-start gap-2 text-sm"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <Checkbox
+                    checked={itemCompleted}
+                    onCheckedChange={() => toggleChecklistItem(project.id, idx)}
+                    className="mt-0.5 flex-shrink-0"
+                  />
+                  <span
+                    className={cn(
+                      itemCompleted && "line-through text-muted-foreground"
+                    )}
+                  >
+                    {item}
+                  </span>
+                </li>
+              );
+            })}
           </ul>
         </div>
 
@@ -126,7 +151,19 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <Button
           variant={isCompleted ? "outline" : "default"}
           className="flex-1"
-          onClick={() => toggleProject(project.id)}
+          disabled={!isProjectCompleted(project.id, project.checklist.length)}
+          onClick={() => {
+            if (!isCompleted) {
+              markProjectComplete(project.id, project.checklist.length);
+            } else {
+              // If completed, uncheck all items to mark incomplete
+              project.checklist.forEach((_, idx) => {
+                if (isChecklistItemCompleted(project.id, idx)) {
+                  toggleChecklistItem(project.id, idx);
+                }
+              });
+            }
+          }}
         >
           {isCompleted ? "Mark Incomplete" : "Mark Complete"}
         </Button>
