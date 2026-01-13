@@ -32,7 +32,7 @@ export function Header() {
             height={24}
             className="h-6 w-6 flex-shrink-0"
           />
-          <span className="text-xl font-bold hidden sm:inline">Godot Roadmap</span>
+          <span className="text-xl font-bold hidden sm:inline">Godot Roadmap (Unofficial)</span>
         </Link>
         <nav className="flex items-center gap-1 sm:gap-4 flex-shrink-0">
           <Link href="/roadmap">
