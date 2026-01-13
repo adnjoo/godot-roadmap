@@ -15,7 +15,6 @@ import { useGym } from "@/lib/store/GymContext";
 import { GymFlowNode } from "./GymFlowNode";
 import { computeLayoutPositions, computeEdges, computeHighlightedPrereqChain } from "@/lib/utils/gymLayout";
 import { type GymFilters } from "./GymFilters";
-import { cn } from "@/lib/utils";
 
 interface GymFlowProps {
   filters: GymFilters;

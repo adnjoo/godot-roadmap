@@ -20,13 +20,10 @@ export function GymCard() {
           <div className="flex items-start justify-between gap-2">
             <div className="flex-1">
               <div className="flex items-center gap-2 mb-2">
-                <h3 className="font-semibold text-lg">Godot Gym (100 Projects)</h3>
-                <Badge variant="secondary" className="bg-cyan-500/10 text-cyan-700 dark:text-cyan-400">
-                  Gym Mode
-                </Badge>
+                <h3 className="font-semibold text-lg">Practice Garden 🌱 (200 Projects)</h3>
               </div>
               <p className="text-sm text-muted-foreground">
-                Master Godot through 100 hands-on projects organized in a skill tree graph. 
+                Master Godot through 200 hands-on projects organized in a skill tree graph. 
                 Progress through 5 tiers from basics to advanced systems.
               </p>
             </div>
@@ -36,20 +33,20 @@ export function GymCard() {
           <div>
             <div className="text-sm font-medium mb-2">Progress</div>
             <div className="text-xs text-muted-foreground">
-              {completed} of 100 projects completed
+              {completed} of 200 projects completed
             </div>
             <div className="w-full bg-secondary rounded-full h-2 mt-2">
               <div
                 className="bg-cyan-500 h-2 rounded-full transition-all"
-                style={{ width: `${(completed / 100) * 100}%` }}
+                style={{ width: `${(completed / 200) * 100}%` }}
               />
             </div>
           </div>
         </CardContent>
         <CardFooter>
           <Button className="flex-1" asChild>
-            <Link href="/projects/gym">
-              Enter Gym Mode
+            <Link href="/projects/practice-garden">
+              Enter Practice Garden 🌱
               <ExternalLink className="h-4 w-4 ml-2" />
             </Link>
           </Button>

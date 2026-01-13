@@ -163,7 +163,7 @@ export function NodeDetailsPanel({ node, isOpen, onClose, isMobile, onPrereqClic
   return (
     <div
       className={cn(
-        "fixed right-0 top-0 h-full w-80 bg-stone-900/95 backdrop-blur-sm border-l border-stone-700 z-20 transition-transform duration-300",
+        "fixed right-0 top-16 h-full w-80 bg-stone-900/95 backdrop-blur-sm border-l border-stone-700 z-[60] transition-transform duration-300",
         isOpen ? "translate-x-0" : "translate-x-full"
       )}
     >

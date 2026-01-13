@@ -143,7 +143,7 @@ export function GymProvider({ children }: { children: React.ReactNode }) {
 export function useGym() {
   const context = useContext(GymContext);
   if (context === undefined) {
-    throw new Error("useGym must be used within a GymProvider");
+    throw new Error("useGym must be used within a PracticeGardenProvider");
   }
   return context;
 }

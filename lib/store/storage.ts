@@ -73,7 +73,7 @@ export function saveGymProgress(data: GymProgressStorage): void {
   try {
     localStorage.setItem(GYM_PROGRESS_STORAGE_KEY, JSON.stringify(data));
   } catch (error) {
-    console.error("Failed to save gym progress:", error);
+    console.error("Failed to save practice garden progress:", error);
   }
 }
 
@@ -84,7 +84,7 @@ export function loadGymProgress(): GymProgressStorage | null {
     if (!stored) return null;
     return JSON.parse(stored) as GymProgressStorage;
   } catch (error) {
-    console.error("Failed to load gym progress:", error);
+    console.error("Failed to load practice garden progress:", error);
     return null;
   }
 }

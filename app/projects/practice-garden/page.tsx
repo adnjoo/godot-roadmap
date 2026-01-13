@@ -6,7 +6,7 @@ import { GymFilters, type GymFilters as GymFiltersType } from "@/components/gym/
 import { NodeDetailsPanel } from "@/components/gym/NodeDetailsPanel";
 import { gymNodes } from "@/data/godotGym";
 
-export default function GymPage() {
+export default function PracticeGardenPage() {
   const [isMobile, setIsMobile] = useState(false);
   const [selectedNodeId, setSelectedNodeId] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");

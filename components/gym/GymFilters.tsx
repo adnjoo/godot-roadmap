@@ -46,7 +46,7 @@ export function GymFilters({ filters, onFiltersChange, searchQuery, onSearchChan
   };
 
   return (
-    <div className="absolute top-4 right-4 z-10 bg-stone-900/90 backdrop-blur-sm border border-stone-700 rounded-lg p-4 space-y-3 w-64">
+    <div className="absolute top-24 right-4 z-10 bg-stone-900/90 backdrop-blur-sm border border-stone-700 rounded-lg p-4 space-y-3 w-64">
       <div className="text-sm font-semibold text-stone-200 mb-2">Filters</div>
       
       {/* Search box */}

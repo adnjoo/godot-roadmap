@@ -26,7 +26,7 @@ export function GymLegend() {
   return (
     <div className="absolute top-4 left-4 z-10 bg-stone-900/90 backdrop-blur-sm border border-stone-700 rounded-lg p-4 space-y-3">
       <div className="text-sm font-semibold text-stone-200 mb-2">
-        Completed: {completed}/100
+        Completed: {completed}/200
       </div>
       <div className="space-y-2">
         {[1, 2, 3, 4, 5].map((tier) => (
