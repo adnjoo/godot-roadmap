@@ -949,6 +949,47 @@
       "keywords": ["release", "checklist", "testing", "launch"]
     },
     {
+      "id": "shipping-05",
+      "sectionId": "shipping",
+      "title": "Game Jam: Ship a Microgame",
+      "summary": "Join a jam (Godot Wild Jam / GMTK / Ludum Dare) and ship a tiny game with a hard deadline. Practice scoping, iteration, and shipping.",
+      "difficulty": "Intermediate",
+      "category": "Tools",
+      "estHours": 8,
+      "prerequisites": ["shipping-01"],
+      "resources": [
+        { "label": "Itch.io Game Jams", "url": "https://itch.io/jams" },
+        { "label": "Godot Wild Jam", "url": "https://itch.io/jam/godot-wild-jam" }
+      ],
+      "keywords": ["game jam", "shipping", "scope", "deadline", "itch.io"]
+    },
+    {
+      "id": "shipping-06",
+      "sectionId": "shipping",
+      "title": "Playtest & Feedback Loop",
+      "summary": "Share a build, collect feedback from 3+ people, and implement at least one improvement based on what you learn.",
+      "difficulty": "Intermediate",
+      "category": "Tools",
+      "estHours": 2,
+      "prerequisites": ["shipping-01"],
+      "resources": [
+        { "label": "Godot Export Tutorial", "url": "https://docs.godotengine.org/en/stable/tutorials/export/index.html" }
+      ],
+      "keywords": ["playtest", "feedback", "iteration", "build"]
+    },
+    {
+      "id": "shipping-07",
+      "sectionId": "shipping",
+      "title": "Release Notes / Devlog",
+      "summary": "Write release notes or a devlog entry: what changed, what's next, and how to play. Practice communicating updates clearly.",
+      "difficulty": "Beginner",
+      "category": "Tools",
+      "estHours": 1,
+      "prerequisites": ["shipping-02"],
+      "resources": [],
+      "keywords": ["devlog", "release notes", "communication", "updates"]
+    },
+    {
       "id": "adv-01",
       "sectionId": "advanced",
       "title": "Multiplayer Networking",

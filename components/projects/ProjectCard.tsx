@@ -2,7 +2,6 @@
 
 import { useRoadmap } from "@/lib/store/RoadmapContext";
 import { Card, CardContent, CardHeader, CardFooter } from "@/components/ui/card";
-import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
