@@ -1059,9 +1059,55 @@
     }
   ],
   "projects": [
+
+    {
+      "id": "proj-02",
+      "title": "Mini Game: Mood Creature",
+      "description": "A tiny character that reacts emotionally to player input. Focus on animation states, transitions, and juice.",
+      "prerequisites": ["2d-07", "2d-08", "2d-12"],
+      "checklist": [
+        "Create idle, happy, tired, scared animations",
+        "Implement animation state machine",
+        "Add smooth blending between states",
+        "Create particles for special actions",
+        "Add screen shake + hit flashes",
+        "Polish timing and personality"
+      ],
+      "scope": "Mini-game: animation feel test, 5–7 hours"
+    },
     {
       "id": "proj-01",
-      "title": "Tiny Platformer",
+      "title": "Mini Game: Chaos Lab",
+      "description": "A physics toybox where players experiment with objects, forces, and puzzles. Focus on fun emergent behavior.",
+      "prerequisites": ["2d-06", "2d-04", "found-04"],
+      "checklist": [
+        "Create stackable and destructible physics objects",
+        "Implement push/pull/launch mechanics",
+        "Add interactive elements (buttons, levers)",
+        "Design 3 small physics puzzles",
+        "Add impact VFX + sound feedback",
+        "Experiment with friction, bounce, mass"
+      ],
+      "scope": "Mini-game: physics sandbox, 4–6 hours"
+    },
+    {
+      "id": "proj-03",
+      "title": "Mini Game: Dash Lab",
+      "description": "Goal: Make movement feel good.",
+      "prerequisites": ["2d-05", "2d-09", "2d-12", "found-04"],
+      "checklist": [
+        "Implement dash ability (cooldown)",
+        "Add trail particles",
+        "Camera shake on dash",
+        "1 simple obstacle course",
+        "Timer (speedrun feel)",
+        "Restart button"
+      ],
+      "scope": "Mini-game: movement and camera mastery, 4–6 hours"
+    },
+    {
+      "id": "proj-04",
+      "title": "Practice Game: Tiny Platformer",
       "description": "Create a simple 2D platformer with a player character that can move, jump, and collect items. Focus on basic movement, collisions, and level design.",
       "prerequisites": ["found-01", "found-03", "found-04", "2d-01", "2d-02", "2d-04", "2d-05", "2d-09"],
       "checklist": [
@@ -1075,8 +1121,23 @@
       "scope": "Small project: 1-2 levels, basic mechanics, 4-6 hours"
     },
     {
-      "id": "proj-02",
-      "title": "Rooftop Farm Prototype",
+      "id": "proj-05",
+      "title": "Polish Sprint: Game Menus",
+      "description": "Focus on creating polished, professional game menus. Build main menu, settings, pause menu, and HUD with smooth transitions and consistent styling.",
+      "prerequisites": ["ui-01", "ui-02", "ui-03", "ui-05", "ui-06", "ui-09"],
+      "checklist": [
+        "Design animated main menu with transitions",
+        "Create comprehensive settings screen (audio/video/keybinds)",
+        "Build in-game pause menu system",
+        "Implement consistent theme and typography",
+        "Add smooth screen transitions and animations",
+        "Test responsive layouts across resolutions"
+      ],
+      "scope": "Polish sprint: UI/UX focus, 4–6 hours"
+    },
+    {
+      "id": "proj-06",
+      "title": "Practice Game: Rooftop Farm Prototype",
       "description": "Build a farming game prototype with planting, harvesting, and inventory management. Practice UI design, state management, and data persistence.",
       "prerequisites": ["2d-01", "2d-02", "ui-01", "ui-02", "ui-03", "game-04", "game-05"],
       "checklist": [
@@ -1090,8 +1151,8 @@
       "scope": "Medium project: core mechanics, multiple systems, 8-12 hours"
     },
     {
-      "id": "proj-03",
-      "title": "Top-down Explorer",
+      "id": "proj-07",
+      "title": "Practice Game: Top-down Explorer",
       "description": "Create a top-down exploration game with character movement, world interaction, and simple quest system. Practice camera controls and world design.",
       "prerequisites": ["2d-01", "2d-02", "2d-04", "2d-05", "2d-09", "ui-01", "game-06"],
       "checklist": [
@@ -1105,66 +1166,21 @@
       "scope": "Medium project: multiple areas, quest system, 10-15 hours"
     },
     {
-      "id": "proj-04",
-      "title": "UI-only Menu Polish",
-      "description": "Focus entirely on UI/UX design. Create a polished main menu, settings screen, and pause menu with smooth transitions and professional styling.",
-      "prerequisites": ["ui-01", "ui-02", "ui-03", "ui-05", "ui-06", "ui-09"],
-      "checklist": [
-        "Design main menu with animations",
-        "Create settings screen with audio/video options",
-        "Build pause menu system",
-        "Implement theme and consistent styling",
-        "Add smooth transitions between screens",
-        "Test on different screen sizes"
-      ],
-      "scope": "Small project: UI focus, no gameplay, 4-6 hours"
-    },
-    {
-      "id": "proj-05",
-      "title": "Physics Playground",
-      "description": "Experiment with RigidBody2D physics, create interactive physics objects, and build a sandbox with various physics interactions.",
-      "prerequisites": ["2d-06", "2d-04", "found-04"],
-      "checklist": [
-        "Create various physics objects",
-        "Implement force application",
-        "Add interactive elements (buttons, levers)",
-        "Create physics-based puzzles",
-        "Add visual feedback for interactions",
-        "Experiment with different physics materials"
-      ],
-      "scope": "Small project: experimentation focus, 4-6 hours"
-    },
-    {
-      "id": "proj-06",
-      "title": "Animation Showcase",
-      "description": "Practice animation skills by creating a character with multiple animation states, smooth transitions, and visual effects.",
-      "prerequisites": ["2d-07", "2d-08", "2d-12"],
-      "checklist": [
-        "Create character sprite animations",
-        "Implement animation state machine",
-        "Add smooth transitions between states",
-        "Create particle effects for actions",
-        "Add visual feedback (screen shake, flashes)",
-        "Polish animation timing and feel"
-      ],
-      "scope": "Small project: animation focus, 5-7 hours"
-    },
-    {
-      "id": "proj-07",
-      "title": "Complete Game: Small Scope",
-      "description": "Build a complete, polished game from start to finish. Include all systems: gameplay, UI, audio, save/load, and export for distribution.",
+      "id": "proj-08",
+      "title": "Capstone: 2D Shmup / Brawler",
+      "description": "Build and ship a complete small game. Treat this like a real release: gameplay, UI, audio, saves, and export.",
       "prerequisites": ["shipping-01", "game-02", "game-07", "ui-01", "2d-01"],
       "checklist": [
-        "Design complete game concept",
-        "Implement all core gameplay",
-        "Create full UI system",
-        "Add audio (music and SFX)",
+        "Design tight 1-core-loop game concept",
+        "Implement all gameplay systems",
+        "Build full UI (menus + HUD)",
+        "Add music + sound effects",
         "Implement save/load",
-        "Polish and bug fixing",
-        "Export and test on target platform",
-        "Create store page or release materials"
+        "Polish + bug fixing pass",
+        "Export and test builds",
+        "Create itch/Steam page"
       ],
-      "scope": "Large project: complete game, 20-40 hours"
+      "scope": "Full game: 20–40 hours"
     }
   ]
 }

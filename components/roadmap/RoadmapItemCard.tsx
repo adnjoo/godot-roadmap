@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import React from "react";
 import { useRoadmap } from "@/lib/store/RoadmapContext";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem } from "@/components/ui/accordion";
@@ -27,13 +28,44 @@ interface RoadmapItemCardProps {
   canStart: boolean;
   isFirst?: boolean;
   isLast?: boolean;
+  searchQuery?: string;
+  compact?: boolean;
+  isCompleted?: boolean;
 }
 
 const roadmapData = roadmapDataRaw as RoadmapData;
 
-export function RoadmapItemCard({ item, canStart, isFirst = false, isLast = false }: RoadmapItemCardProps) {
+// Helper function to highlight search matches
+function highlightText(text: string, query: string): React.ReactNode {
+  if (!query || query.trim() === "") {
+    return text;
+  }
+
+  const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")})`, "gi");
+  const parts = text.split(regex);
+
+  return parts.map((part, index) =>
+    regex.test(part) ? (
+      <mark key={index} className="bg-yellow-200 dark:bg-yellow-900/50 rounded px-0.5">
+        {part}
+      </mark>
+    ) : (
+      part
+    )
+  );
+}
+
+export function RoadmapItemCard({
+  item,
+  canStart,
+  isFirst = false,
+  isLast = false,
+  searchQuery = "",
+  compact = false,
+  isCompleted: propIsCompleted,
+}: RoadmapItemCardProps) {
   const { completedItems, toggleItem } = useRoadmap();
-  const isCompleted = completedItems.has(item.id);
+  const isCompleted = propIsCompleted ?? completedItems.has(item.id);
   const [isAccordionOpen, setIsAccordionOpen] = useState(false);
   const isActive = isAccordionOpen && canStart && !isCompleted;
 
@@ -132,7 +164,8 @@ export function RoadmapItemCard({ item, canStart, isFirst = false, isLast = fals
           <button
             onClick={() => toggleItem(item.id)}
             className={getNodeStyle()}
-            aria-label={isCompleted ? "Mark as incomplete" : "Mark as complete"}
+            aria-label={isCompleted ? `Mark ${item.title} as incomplete` : `Mark ${item.title} as complete`}
+            aria-pressed={isCompleted}
           >
             {isCompleted ? (
               <Check className="w-3 h-3 text-white" />
@@ -157,22 +190,26 @@ export function RoadmapItemCard({ item, canStart, isFirst = false, isLast = fals
       </div>
 
       {/* Right Content Column */}
-      <div className="flex-1 py-4 pl-4 pr-6">
+      <div className={cn("flex-1 pl-4 pr-6", compact ? "py-2" : "py-4")}>
         {/* Clickable Header */}
         <button
           onClick={() => setIsAccordionOpen(!isAccordionOpen)}
           className="w-full text-left cursor-pointer"
+          aria-expanded={isAccordionOpen}
+          aria-controls={`item-${item.id}-details`}
+          aria-label={`${item.title}: ${item.summary}`}
         >
           <div className="flex items-start gap-2 flex-wrap mb-2">
             <h3
               className={cn(
-                "font-semibold text-base transition-colors",
+                "font-semibold transition-colors",
+                compact ? "text-sm" : "text-base",
                 isCompleted && "line-through opacity-60",
                 isActive && "dark:text-[hsl(var(--cyber-cyan))]",
                 !isCompleted && !isActive && "dark:text-gray-200 text-gray-900"
               )}
             >
-              {item.title}
+              {searchQuery ? highlightText(item.title, searchQuery) : item.title}
             </h3>
             {isCompleted && (
               <Badge
@@ -183,19 +220,21 @@ export function RoadmapItemCard({ item, canStart, isFirst = false, isLast = fals
               </Badge>
             )}
           </div>
-          <p
-            className={cn(
-              "text-sm transition-colors",
-              isCompleted ? "text-muted-foreground opacity-50" : "text-muted-foreground",
-              isActive && "dark:text-gray-300"
-            )}
-          >
-            {item.summary}
-          </p>
+          {!compact && (
+            <p
+              className={cn(
+                "text-sm transition-colors",
+                isCompleted ? "text-muted-foreground opacity-50" : "text-muted-foreground",
+                isActive && "dark:text-gray-300"
+              )}
+            >
+              {searchQuery ? highlightText(item.summary, searchQuery) : item.summary}
+            </p>
+          )}
         </button>
 
         {/* Badges Row */}
-        <div className="flex flex-wrap items-center gap-2 mt-3 mb-3">
+        <div className={cn("flex flex-wrap items-center gap-2", compact ? "mt-1 mb-1" : "mt-3 mb-3")}>
           <Badge
             variant="outline"
             className={cn(difficultyColors[item.difficulty], "border transition-all")}
@@ -265,7 +304,7 @@ export function RoadmapItemCard({ item, canStart, isFirst = false, isLast = fals
           onValueChange={(value) => setIsAccordionOpen(value === "details")}
         >
           <AccordionItem value="details" className="border-none">
-            <AccordionContent>
+            <AccordionContent id={`item-${item.id}-details`}>
               <div className="space-y-3 text-sm">
                 {item.resources.length > 0 && (
                   <div>
