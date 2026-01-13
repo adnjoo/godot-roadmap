@@ -3,7 +3,7 @@
 A structured learning path for developers who want to *actually* get good at Godot.
 Go from absolute beginner → confident game dev with **60+ curated learning items** and **7 hands-on projects**.
 
-👉 **Live app:** [https://godot-roadmap.vercel.app/roadmap](https://godot-roadmap.vercel.app/roadmap)
+👉 **Live app:** [https://godotroadmap.com](https://godotroadmap.com)
 
 ![Screenshot](./public/screen-3.png)
 
