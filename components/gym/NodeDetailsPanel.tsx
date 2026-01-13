@@ -18,6 +18,7 @@ interface NodeDetailsPanelProps {
   isOpen: boolean;
   onClose: () => void;
   isMobile: boolean;
+  onPrereqClick?: (nodeId: string) => void;
 }
 
 const TIER_COLORS = {
@@ -28,7 +29,7 @@ const TIER_COLORS = {
   5: "bg-red-500/20 text-red-400 border-red-500",
 };
 
-export function NodeDetailsPanel({ node, isOpen, onClose, isMobile }: NodeDetailsPanelProps) {
+export function NodeDetailsPanel({ node, isOpen, onClose, isMobile, onPrereqClick }: NodeDetailsPanelProps) {
   const { isNodeCompleted, toggleNode, isNodeUnlocked } = useGym();
 
   if (!node) return null;
@@ -91,7 +92,25 @@ export function NodeDetailsPanel({ node, isOpen, onClose, isMobile }: NodeDetail
               const prereq = gymNodes.find((n) => n.id === prereqId);
               return (
                 <li key={prereqId}>
-                  {prereq ? prereq.title : prereqId}
+                  {prereq ? (
+                    onPrereqClick ? (
+                      <button
+                        onClick={() => {
+                          onPrereqClick(prereqId);
+                          if (isMobile) {
+                            onClose();
+                          }
+                        }}
+                        className="text-cyan-400 hover:text-cyan-300 underline cursor-pointer"
+                      >
+                        {prereq.title}
+                      </button>
+                    ) : (
+                      prereq.title
+                    )
+                  ) : (
+                    prereqId
+                  )}
                 </li>
               );
             })}

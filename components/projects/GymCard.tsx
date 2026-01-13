@@ -26,7 +26,7 @@ export function GymCard() {
                 </Badge>
               </div>
               <p className="text-sm text-muted-foreground">
-                Master Godot through 100 hands-on projects organized in a radial skill tree. 
+                Master Godot through 100 hands-on projects organized in a skill tree graph. 
                 Progress through 5 tiers from basics to advanced systems.
               </p>
             </div>
