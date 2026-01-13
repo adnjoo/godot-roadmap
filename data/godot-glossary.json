@@ -8,39 +8,158 @@
       "terms": [
         {
           "term": "Project",
-          "definition": "A game/app folder with project.godot at the root."
+          "definition": "A game/app folder with project.godot at the root.",
+          "badges": ["godot"]
         },
         {
           "term": "Scene",
-          "definition": "A reusable \"thing\" made of nodes (like a prefab). Saved as .tscn / .scn."
+          "definition": "A reusable \"thing\" made of nodes (like a prefab). Saved as .tscn / .scn.",
+          "badges": ["godot"]
         },
         {
           "term": "Node",
-          "definition": "The basic building block. Everything in a scene tree is a node."
+          "definition": "The basic building block. Everything in a scene tree is a node.",
+          "badges": ["godot"]
         },
         {
           "term": "Scene Tree",
-          "definition": "The runtime hierarchy of nodes (your running world)."
+          "definition": "The runtime hierarchy of nodes (your running world).",
+          "badges": ["godot"]
         },
         {
           "term": "Tree (SceneTree)",
-          "definition": "The engine object managing your running scenes; accessible via get_tree()."
+          "definition": "The engine object managing your running scenes; accessible via get_tree().",
+          "badges": ["godot"]
         },
         {
           "term": "PackedScene",
-          "definition": "A saved scene you can instantiate at runtime."
+          "definition": "A saved scene you can instantiate at runtime.",
+          "badges": ["godot"]
         },
         {
           "term": "Instance / Instantiate",
-          "definition": "Creating a runtime copy of a scene (Godot 4 uses instantiate())."
+          "definition": "Creating a runtime copy of a scene (Godot 4 uses instantiate()).",
+          "badges": ["godot"]
         },
         {
           "term": "Owner",
-          "definition": "A node's \"scene ownership\" for saving/exporting parts of a tree into a scene file."
+          "definition": "A node's \"scene ownership\" for saving/exporting parts of a tree into a scene file.",
+          "badges": ["godot"]
         },
         {
           "term": "Unique Name",
-          "definition": "A node can be marked unique for %NodeName access (Godot 4 feature)."
+          "definition": "A node can be marked unique for %NodeName access (Godot 4 feature).",
+          "badges": ["godot"]
+        },
+        {
+          "term": "Engine",
+          "definition": "The game engine software that runs your game (e.g., Godot, Unity, Unreal).",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Framework",
+          "definition": "A collection of tools and libraries that provide structure for game development.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Runtime",
+          "definition": "The period when your game is running and executing code.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Build",
+          "definition": "The process of compiling and packaging your game for distribution.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Compile",
+          "definition": "Converting source code into executable machine code.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Actor",
+          "definition": "A game entity that can perform actions (common in some engines).",
+          "badges": ["universal"]
+        },
+        {
+          "term": "GameObject",
+          "definition": "A container for components in component-based architectures (e.g., Unity).",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Component",
+          "definition": "A modular piece of functionality attached to an entity or object.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "System",
+          "definition": "A manager that processes entities or components in a game architecture.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Entity",
+          "definition": "A unique identifier for an object in Entity Component System (ECS) architecture.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "ECS (Entity Component System)",
+          "definition": "An architectural pattern separating data (components) from logic (systems) via entities.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Prefab",
+          "definition": "A reusable template for creating game objects or scenes.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Hierarchy",
+          "definition": "The parent-child relationship structure of game objects or nodes.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Root",
+          "definition": "The top-level parent in a hierarchy with no parent itself.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Child",
+          "definition": "An object or node that has a parent in the hierarchy.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Parent",
+          "definition": "An object or node that contains children in the hierarchy.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Transform",
+          "definition": "Position, rotation, and scale of an object in 2D or 3D space.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Lifecycle",
+          "definition": "The sequence of events from object creation to destruction.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Update loop",
+          "definition": "The main game loop that runs every frame to update game state.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Tick",
+          "definition": "A single iteration of the game loop or physics simulation.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Delta time",
+          "definition": "Time elapsed since the last frame, used for frame-rate independent calculations.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Initialization",
+          "definition": "The process of setting up an object or system when it's first created.",
+          "badges": ["universal"]
         }
       ]
     },
@@ -50,31 +169,38 @@
       "terms": [
         {
           "term": "Node",
-          "definition": "Base class, no transform."
+          "definition": "Base class, no transform.",
+          "badges": ["godot"]
         },
         {
           "term": "Node2D",
-          "definition": "2D transform (position/rotation/scale)."
+          "definition": "2D transform (position/rotation/scale).",
+          "badges": ["godot"]
         },
         {
           "term": "Control",
-          "definition": "UI node (layout + anchors/margins)."
+          "definition": "UI node (layout + anchors/margins).",
+          "badges": ["godot"]
         },
         {
           "term": "Node3D",
-          "definition": "3D transform."
+          "definition": "3D transform.",
+          "badges": ["godot"]
         },
         {
           "term": "CanvasItem",
-          "definition": "Base for 2D drawables (Node2D + Control inherit this)."
+          "definition": "Base for 2D drawables (Node2D + Control inherit this).",
+          "badges": ["godot"]
         },
         {
           "term": "Viewport",
-          "definition": "A render target (main screen is a viewport; can make your own)."
+          "definition": "A render target (main screen is a viewport; can make your own).",
+          "badges": ["godot"]
         },
         {
           "term": "CanvasLayer",
-          "definition": "Draw UI/2D on a separate layer (good for HUD)."
+          "definition": "Draw UI/2D on a separate layer (good for HUD).",
+          "badges": ["godot"]
         }
       ]
     },
@@ -84,23 +210,28 @@
       "terms": [
         {
           "term": "Resource",
-          "definition": "Data object that can be saved/loaded (.tres, .res). Materials, scripts, animations, etc."
+          "definition": "Data object that can be saved/loaded (.tres, .res). Materials, scripts, animations, etc.",
+          "badges": ["godot"]
         },
         {
           "term": ".tres vs .res",
-          "definition": "Text vs binary resource formats."
+          "definition": "Text vs binary resource formats.",
+          "badges": ["godot"]
         },
         {
           "term": "Texture2D / SpriteFrames / Material",
-          "definition": "Common resource types."
+          "definition": "Common resource types.",
+          "badges": ["godot"]
         },
         {
           "term": "Theme",
-          "definition": "UI styling resource for Control nodes."
+          "definition": "UI styling resource for Control nodes.",
+          "badges": ["godot"]
         },
         {
           "term": "Import settings",
-          "definition": "Godot's asset import pipeline (textures, audio, models)."
+          "definition": "Godot's asset import pipeline (textures, audio, models).",
+          "badges": ["godot"]
         }
       ]
     },
@@ -110,43 +241,53 @@
       "terms": [
         {
           "term": "GDScript",
-          "definition": "Godot's built-in scripting language."
+          "definition": "Godot's built-in scripting language.",
+          "badges": ["godot"]
         },
         {
           "term": "C#",
-          "definition": "Supported via .NET (depending on your export setup)."
+          "definition": "Supported via .NET (depending on your export setup).",
+          "badges": ["godot"]
         },
         {
           "term": "Native / GDExtension",
-          "definition": "C++ extensions system (replaces old GDNative)."
+          "definition": "C++ extensions system (replaces old GDNative).",
+          "badges": ["godot"]
         },
         {
           "term": "Class / extends",
-          "definition": "Script inheritance (extends Node2D, etc.)."
+          "definition": "Script inheritance (extends Node2D, etc.).",
+          "badges": ["godot"]
         },
         {
           "term": "@export",
-          "definition": "Exposes a variable in the Inspector."
+          "definition": "Exposes a variable in the Inspector.",
+          "badges": ["godot"]
         },
         {
           "term": "@onready",
-          "definition": "Assign after the node enters the scene tree (when children exist)."
+          "definition": "Assign after the node enters the scene tree (when children exist).",
+          "badges": ["godot"]
         },
         {
           "term": "Signal",
-          "definition": "Event system (emit/subscribe)."
+          "definition": "Event system (emit/subscribe).",
+          "badges": ["godot"]
         },
         {
           "term": "Callable",
-          "definition": "A function reference you can store/pass."
+          "definition": "A function reference you can store/pass.",
+          "badges": ["godot"]
         },
         {
           "term": "Variant",
-          "definition": "Godot's dynamic value type (can hold many kinds of data)."
+          "definition": "Godot's dynamic value type (can hold many kinds of data).",
+          "badges": ["godot"]
         },
         {
           "term": "Built-in types",
-          "definition": "Vector2, Vector3, Transform2D, Transform3D, Color, Rect2, etc."
+          "definition": "Vector2, Vector3, Transform2D, Transform3D, Color, Rect2, etc.",
+          "badges": ["godot"]
         }
       ]
     },
@@ -156,31 +297,38 @@
       "terms": [
         {
           "term": "_init()",
-          "definition": "Constructor-like initialization."
+          "definition": "Constructor-like initialization.",
+          "badges": ["godot"]
         },
         {
           "term": "_enter_tree()",
-          "definition": "Called when added to the scene tree."
+          "definition": "Called when added to the scene tree.",
+          "badges": ["godot"]
         },
         {
           "term": "_ready()",
-          "definition": "Called when node + children are ready."
+          "definition": "Called when node + children are ready.",
+          "badges": ["godot"]
         },
         {
           "term": "_process(delta)",
-          "definition": "Every frame (render frame)."
+          "definition": "Every frame (render frame).",
+          "badges": ["godot"]
         },
         {
           "term": "_physics_process(delta)",
-          "definition": "Fixed timestep (physics)."
+          "definition": "Fixed timestep (physics).",
+          "badges": ["godot"]
         },
         {
           "term": "_input(event)",
-          "definition": "Raw input events."
+          "definition": "Raw input events.",
+          "badges": ["godot"]
         },
         {
           "term": "_unhandled_input(event)",
-          "definition": "Input not consumed by UI/others."
+          "definition": "Input not consumed by UI/others.",
+          "badges": ["godot"]
         }
       ]
     },
@@ -190,15 +338,18 @@
       "terms": [
         {
           "term": "Signals (connect/emit)",
-          "definition": "Decoupled communication."
+          "definition": "Decoupled communication.",
+          "badges": ["godot"]
         },
         {
           "term": "Groups",
-          "definition": "Tag nodes to broadcast calls (get_tree().call_group())."
+          "definition": "Tag nodes to broadcast calls (get_tree().call_group()).",
+          "badges": ["godot"]
         },
         {
           "term": "Autoload / Singleton",
-          "definition": "A scene/script loaded once and globally accessible."
+          "definition": "A scene/script loaded once and globally accessible.",
+          "badges": ["godot"]
         }
       ]
     },
@@ -208,39 +359,183 @@
       "terms": [
         {
           "term": "CharacterBody2D",
-          "definition": "Kinematic-style movement with move_and_slide()."
+          "definition": "Kinematic-style movement with move_and_slide().",
+          "badges": ["godot"]
         },
         {
           "term": "RigidBody2D",
-          "definition": "Physics-simulated body (forces/impulses)."
+          "definition": "Physics-simulated body (forces/impulses).",
+          "badges": ["godot"]
         },
         {
           "term": "StaticBody2D",
-          "definition": "Doesn't move (walls/floors)."
+          "definition": "Doesn't move (walls/floors).",
+          "badges": ["godot"]
         },
         {
           "term": "Area2D",
-          "definition": "Detection/overlaps/triggers."
+          "definition": "Detection/overlaps/triggers.",
+          "badges": ["godot"]
         },
         {
           "term": "CollisionShape2D / CollisionPolygon2D",
-          "definition": "Defines collision geometry."
+          "definition": "Defines collision geometry.",
+          "badges": ["godot"]
         },
         {
           "term": "PhysicsMaterial",
-          "definition": "Friction/bounce."
+          "definition": "Friction/bounce.",
+          "badges": ["godot"]
         },
         {
           "term": "Layers & Masks",
-          "definition": "\"What am I?\" (layer) and \"what do I collide with?\" (mask)."
+          "definition": "\"What am I?\" (layer) and \"what do I collide with?\" (mask).",
+          "badges": ["godot"]
         },
         {
           "term": "RayCast2D / ShapeCast2D",
-          "definition": "Queries for collision checks."
+          "definition": "Queries for collision checks.",
+          "badges": ["godot"]
         },
         {
           "term": "DirectSpaceState",
-          "definition": "Advanced physics queries API."
+          "definition": "Advanced physics queries API.",
+          "badges": ["godot"]
+        },
+        {
+          "term": "Collider",
+          "definition": "A shape that defines collision boundaries for physics detection.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Hitbox",
+          "definition": "Collision shape that detects when something is hit.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Hurtbox",
+          "definition": "Collision shape that detects when something takes damage.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Rigidbody",
+          "definition": "A physics body that responds to forces and collisions.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Kinematic",
+          "definition": "A body moved manually by code rather than physics simulation.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Static body",
+          "definition": "A physics body that doesn't move (walls, floors, obstacles).",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Dynamic body",
+          "definition": "A physics body that moves and responds to forces.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Raycast",
+          "definition": "A line query to detect collisions along a path.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Shape cast",
+          "definition": "A swept volume query to detect collisions along a path.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Overlap",
+          "definition": "Detecting when two collision shapes intersect without physics response.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Trigger",
+          "definition": "A collision shape that detects overlaps but doesn't cause physics collisions.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Collision",
+          "definition": "When two physics bodies come into contact.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Penetration",
+          "definition": "When objects overlap into each other (should be resolved by physics).",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Resolution",
+          "definition": "The process of separating overlapping physics bodies.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Restitution",
+          "definition": "Bounciness coefficient; how much energy is retained in collisions.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Bounce",
+          "definition": "The rebounding effect when objects collide.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Friction",
+          "definition": "Resistance to sliding when surfaces are in contact.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Mass",
+          "definition": "The weight of a physics body, affecting how forces affect it.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Drag",
+          "definition": "Air resistance or damping that slows down movement.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Constraint",
+          "definition": "A limitation on how physics bodies can move relative to each other.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Joint",
+          "definition": "A connection between two physics bodies that limits their movement.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Torque",
+          "definition": "Rotational force applied to a physics body.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Sleep",
+          "definition": "When a physics body stops moving and is deactivated for performance.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Wake",
+          "definition": "Activating a sleeping physics body when it needs to move again.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "CCD (continuous collision)",
+          "definition": "Continuous collision detection for fast-moving objects to prevent tunneling.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Physics step",
+          "definition": "A single update of the physics simulation at a fixed timestep.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Filter",
+          "definition": "Rules that determine which objects can collide with each other.",
+          "badges": ["universal"]
         }
       ]
     },
@@ -250,23 +545,28 @@
       "terms": [
         {
           "term": "CharacterBody3D / RigidBody3D / StaticBody3D / Area3D",
-          "definition": "3D equivalents of 2D physics bodies."
+          "definition": "3D equivalents of 2D physics bodies.",
+          "badges": ["godot"]
         },
         {
           "term": "CollisionShape3D",
-          "definition": "3D collision geometry."
+          "definition": "3D collision geometry.",
+          "badges": ["godot"]
         },
         {
           "term": "MeshInstance3D",
-          "definition": "A visible 3D mesh."
+          "definition": "A visible 3D mesh.",
+          "badges": ["godot"]
         },
         {
           "term": "Camera3D / DirectionalLight3D / OmniLight3D",
-          "definition": "3D camera and lighting nodes."
+          "definition": "3D camera and lighting nodes.",
+          "badges": ["godot"]
         },
         {
           "term": "NavigationRegion3D / NavMesh",
-          "definition": "Pathfinding."
+          "definition": "Pathfinding.",
+          "badges": ["godot"]
         }
       ]
     },
@@ -276,19 +576,138 @@
       "terms": [
         {
           "term": "AnimationPlayer",
-          "definition": "Plays keyframed animations."
+          "definition": "Plays keyframed animations.",
+          "badges": ["godot"]
         },
         {
           "term": "AnimationTree",
-          "definition": "Blending/state machines for animations."
+          "definition": "Blending/state machines for animations.",
+          "badges": ["godot"]
         },
         {
           "term": "Tween",
-          "definition": "Code-driven interpolation (\"animate this value over time\")."
+          "definition": "Code-driven interpolation (\"animate this value over time\").",
+          "badges": ["godot"]
         },
         {
           "term": "Skeleton2D / Skeleton3D",
-          "definition": "Bone-based animation."
+          "definition": "Bone-based animation.",
+          "badges": ["godot"]
+        },
+        {
+          "term": "Keyframe",
+          "definition": "A specific point in time where an animation property has a defined value.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Timeline",
+          "definition": "A visual representation of animation over time.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Blend",
+          "definition": "Smoothly transitioning between two animations.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Blend tree",
+          "definition": "A system for blending multiple animations based on parameters.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Transition",
+          "definition": "The change from one animation state to another.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Loop",
+          "definition": "An animation that repeats continuously.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Root motion",
+          "definition": "Movement data extracted from animation to drive character movement.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Rig",
+          "definition": "The skeleton structure that controls how a model deforms.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Skeleton",
+          "definition": "The bone hierarchy that controls character deformation.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Bone",
+          "definition": "A single element in a skeleton that influences mesh deformation.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "IK (Inverse Kinematics)",
+          "definition": "A system that calculates bone rotations to reach a target position.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "FK (Forward Kinematics)",
+          "definition": "Animating bones by directly setting their rotations.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Easing curve",
+          "definition": "A mathematical function that controls animation acceleration/deceleration.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Clip",
+          "definition": "A single animation sequence with a start and end time.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Playback speed",
+          "definition": "The rate at which an animation plays (1.0 = normal, 2.0 = double speed).",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Event",
+          "definition": "A marker in an animation that triggers code at a specific time.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Notify",
+          "definition": "A signal or callback triggered at a specific point in an animation.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Retarget",
+          "definition": "Applying an animation from one skeleton to another with different proportions.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Pose",
+          "definition": "A specific arrangement of bone positions and rotations.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Mask",
+          "definition": "Selectively enabling or disabling animation on specific bones or layers.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Layered animation",
+          "definition": "Stacking multiple animations on top of each other (e.g., walking + waving).",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Additive",
+          "definition": "An animation that modifies another animation rather than replacing it.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Sync",
+          "definition": "Synchronizing multiple animations to play at the same rate or phase.",
+          "badges": ["universal"]
         }
       ]
     },
@@ -298,15 +717,108 @@
       "terms": [
         {
           "term": "InputMap",
-          "definition": "Named actions (recommended)."
+          "definition": "Named actions (recommended).",
+          "badges": ["godot"]
         },
         {
           "term": "Input.is_action_pressed()",
-          "definition": "Query actions."
+          "definition": "Query actions.",
+          "badges": ["godot"]
         },
         {
           "term": "Events",
-          "definition": "InputEventKey, InputEventMouseButton, etc."
+          "definition": "InputEventKey, InputEventMouseButton, etc.",
+          "badges": ["godot"]
+        },
+        {
+          "term": "Input map",
+          "definition": "A configuration that maps physical inputs to logical actions.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Action",
+          "definition": "A named input action (e.g., \"jump\", \"move\") that can be bound to different keys.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Axis",
+          "definition": "A continuous input value ranging from -1 to 1 (e.g., joystick, trigger).",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Rebind",
+          "definition": "Allowing players to change which keys/buttons trigger actions.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Polling",
+          "definition": "Checking input state every frame rather than responding to events.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Gamepad",
+          "definition": "A controller input device (Xbox, PlayStation, etc.).",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Keyboard",
+          "definition": "Keyboard input device.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Mouse",
+          "definition": "Mouse input device for cursor and button input.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Touch",
+          "definition": "Touch screen input for mobile and tablet devices.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Gesture",
+          "definition": "A complex touch input pattern (swipe, pinch, etc.).",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Sensitivity",
+          "definition": "A multiplier that adjusts how much input affects movement or rotation.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Acceleration curve",
+          "definition": "A function that maps raw input to output, often used for smoothing or non-linear response.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Vibration",
+          "definition": "Haptic feedback from controllers (rumble).",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Focus",
+          "definition": "Which UI element or window currently receives input.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Cursor lock",
+          "definition": "Locking the mouse cursor to the center of the screen (common in FPS games).",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Capture",
+          "definition": "Capturing all input events, preventing them from reaching other systems.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Double-tap",
+          "definition": "A gesture requiring two quick taps/clicks in succession.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Hold",
+          "definition": "Pressing and maintaining an input for a duration.",
+          "badges": ["universal"]
         }
       ]
     },
@@ -316,19 +828,23 @@
       "terms": [
         {
           "term": "Anchors/Margins",
-          "definition": "How UI positions/sizes relative to parent."
+          "definition": "How UI positions/sizes relative to parent.",
+          "badges": ["godot"]
         },
         {
           "term": "Containers",
-          "definition": "Auto-layout (HBox/VBox/GridContainer, etc.)."
+          "definition": "Auto-layout (HBox/VBox/GridContainer, etc.).",
+          "badges": ["godot"]
         },
         {
           "term": "Focus",
-          "definition": "Keyboard/controller navigation."
+          "definition": "Keyboard/controller navigation.",
+          "badges": ["godot"]
         },
         {
           "term": "Theme Overrides",
-          "definition": "Per-node styling adjustments."
+          "definition": "Per-node styling adjustments.",
+          "badges": ["godot"]
         }
       ]
     },
@@ -338,27 +854,203 @@
       "terms": [
         {
           "term": "Sprite2D",
-          "definition": "Draw a texture in 2D."
+          "definition": "Draw a texture in 2D.",
+          "badges": ["godot"]
         },
         {
           "term": "AnimatedSprite2D",
-          "definition": "Frame animation (SpriteFrames resource)."
+          "definition": "Frame animation (SpriteFrames resource).",
+          "badges": ["godot"]
         },
         {
           "term": "TileMap / TileSet",
-          "definition": "Grid-based level building (Godot 4 TileMap workflow)."
+          "definition": "Grid-based level building (Godot 4 TileMap workflow).",
+          "badges": ["godot"]
         },
         {
           "term": "Particles2D / GPUParticles2D",
-          "definition": "Particle systems."
+          "definition": "Particle systems.",
+          "badges": ["godot"]
         },
         {
           "term": "Shaders (ShaderMaterial)",
-          "definition": "Custom GPU code for effects."
+          "definition": "Custom GPU code for effects.",
+          "badges": ["godot"]
         },
         {
           "term": "Z-index / Y-sort",
-          "definition": "Draw order controls."
+          "definition": "Draw order controls.",
+          "badges": ["godot"]
+        },
+        {
+          "term": "Sprite",
+          "definition": "A 2D image displayed in the game world.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Texture",
+          "definition": "An image file used for rendering surfaces.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Atlas",
+          "definition": "A single texture containing multiple smaller images (sprite sheet).",
+          "badges": ["universal"]
+        },
+        {
+          "term": "UV",
+          "definition": "Texture coordinates that map vertices to positions in a texture.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Shader",
+          "definition": "GPU program that controls how surfaces are rendered.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Material",
+          "definition": "A resource that defines surface properties (color, shininess, shader, etc.).",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Mesh",
+          "definition": "A 3D model made of vertices, edges, and faces.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Vertex",
+          "definition": "A point in 3D space that defines the shape of a mesh.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Fragment",
+          "definition": "A pixel being processed by a fragment shader.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Normal map",
+          "definition": "A texture that adds surface detail by simulating bumps and grooves.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Lightmap",
+          "definition": "A pre-calculated texture storing lighting information for static geometry.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Ambient light",
+          "definition": "Base lighting that affects all surfaces equally.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Directional light",
+          "definition": "A light source that shines in one direction (like the sun).",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Point light",
+          "definition": "A light source that radiates in all directions from a point (like a lightbulb).",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Shadow map",
+          "definition": "A texture that stores depth information for rendering shadows.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Bloom",
+          "definition": "A post-processing effect that makes bright areas glow.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Motion blur",
+          "definition": "A post-processing effect that blurs fast-moving objects.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Post-processing",
+          "definition": "Visual effects applied after the main scene is rendered.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Render pass",
+          "definition": "A single rendering operation that draws part of the scene.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Draw call",
+          "definition": "A command sent to the GPU to render geometry.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Culling",
+          "definition": "Skipping rendering of objects that aren't visible.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Frustum",
+          "definition": "The viewable area of the camera (pyramid-shaped in 3D).",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Occlusion",
+          "definition": "When one object blocks another from view.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Transparency",
+          "definition": "The ability to see through an object (alpha blending).",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Alpha",
+          "definition": "The transparency channel of a color or texture.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Sorting layer",
+          "definition": "A layer that determines draw order for 2D sprites.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Z-index",
+          "definition": "A value that determines draw order (higher = drawn on top).",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Y-sort",
+          "definition": "Sorting sprites by Y position to create depth illusion.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Parallax",
+          "definition": "An effect where distant objects move slower than close ones, creating depth.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Particles",
+          "definition": "Small visual elements used for effects (smoke, sparks, etc.).",
+          "badges": ["universal"]
+        },
+        {
+          "term": "GPU",
+          "definition": "Graphics Processing Unit; hardware that handles rendering.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "LOD",
+          "definition": "Level of Detail; using simpler models at greater distances.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Mipmap",
+          "definition": "Pre-generated smaller versions of textures for distance rendering.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Resolution",
+          "definition": "The number of pixels in width and height of a display or texture.",
+          "badges": ["universal"]
         }
       ]
     },
@@ -368,19 +1060,23 @@
       "terms": [
         {
           "term": "ConfigFile",
-          "definition": "Simple INI-like save."
+          "definition": "Simple INI-like save.",
+          "badges": ["godot"]
         },
         {
           "term": "FileAccess",
-          "definition": "Read/write files."
+          "definition": "Read/write files.",
+          "badges": ["godot"]
         },
         {
           "term": "JSON",
-          "definition": "Common data format."
+          "definition": "Common data format.",
+          "badges": ["godot"]
         },
         {
           "term": "Resource saving",
-          "definition": "You can save custom Resources too (great for item databases)."
+          "definition": "You can save custom Resources too (great for item databases).",
+          "badges": ["godot"]
         }
       ]
     },
@@ -390,23 +1086,28 @@
       "terms": [
         {
           "term": "Inspector",
-          "definition": "Where you edit node properties."
+          "definition": "Where you edit node properties.",
+          "badges": ["godot"]
         },
         {
           "term": "Dock",
-          "definition": "Panels (Scene, FileSystem, Inspector, etc.)."
+          "definition": "Panels (Scene, FileSystem, Inspector, etc.).",
+          "badges": ["godot"]
         },
         {
           "term": "Remote",
-          "definition": "Scene tree view of the running game."
+          "definition": "Scene tree view of the running game.",
+          "badges": ["godot"]
         },
         {
           "term": "Gizmos",
-          "definition": "Editor helpers for transforms/handles."
+          "definition": "Editor helpers for transforms/handles.",
+          "badges": ["godot"]
         },
         {
           "term": "Export Presets",
-          "definition": "Packaging for Windows/macOS/Linux/Web/Android/iOS."
+          "definition": "Packaging for Windows/macOS/Linux/Web/Android/iOS.",
+          "badges": ["godot"]
         }
       ]
     },
@@ -416,19 +1117,375 @@
       "terms": [
         {
           "term": "Delta",
-          "definition": "Time since last frame (for frame-rate independent motion)."
+          "definition": "Time since last frame (for frame-rate independent motion).",
+          "badges": ["godot"]
         },
         {
           "term": "Fixed timestep",
-          "definition": "Physics tick rate."
+          "definition": "Physics tick rate.",
+          "badges": ["godot"]
         },
         {
           "term": "Batching",
-          "definition": "Rendering optimization."
+          "definition": "Rendering optimization.",
+          "badges": ["godot"]
         },
         {
           "term": "Profiler / Monitor",
-          "definition": "Built-in performance tools."
+          "definition": "Built-in performance tools.",
+          "badges": ["godot"]
+        }
+      ]
+    },
+    {
+      "id": "math-logic",
+      "title": "Math & Gameplay Logic",
+      "terms": [
+        {
+          "term": "Clamp",
+          "definition": "Restrict a value to a minimum and maximum range.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Lerp",
+          "definition": "Linear interpolation between two values over time.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Inverse Lerp",
+          "definition": "Find the interpolation factor (0-1) for a value between two bounds.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Remap",
+          "definition": "Map a value from one range to another range.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Move Toward",
+          "definition": "Move a value toward a target by a fixed amount.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Normalize",
+          "definition": "Convert a vector to unit length (magnitude of 1) while preserving direction.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Distance",
+          "definition": "Calculate the distance between two points.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Dot Product",
+          "definition": "Mathematical operation on vectors; useful for angles, projections, and direction checks.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Angle",
+          "definition": "The rotation or direction between two points, typically measured in radians or degrees.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Wrap",
+          "definition": "Wrap a value around when it exceeds bounds (e.g., 361° becomes 1°).",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Snap",
+          "definition": "Round a value to the nearest multiple of a step size.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Ease",
+          "definition": "Smooth acceleration/deceleration curves for animations and movement.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Acceleration",
+          "definition": "Rate of change in velocity over time.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Deceleration",
+          "definition": "Negative acceleration; slowing down over time.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Deadzone",
+          "definition": "Input threshold below which values are ignored (common for gamepad sticks).",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Cooldown",
+          "definition": "Time delay before an action can be performed again.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "State Machine",
+          "definition": "System that manages different states and transitions between them (e.g., idle, walking, jumping).",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Vector",
+          "definition": "A mathematical quantity with both magnitude and direction.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Vector2",
+          "definition": "A 2D vector with X and Y components.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Vector3",
+          "definition": "A 3D vector with X, Y, and Z components.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Magnitude",
+          "definition": "The length or size of a vector.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Cross product",
+          "definition": "A vector operation that produces a vector perpendicular to two input vectors.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Radian",
+          "definition": "A unit of angle measurement (2π radians = 360 degrees).",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Degree",
+          "definition": "A unit of angle measurement (360 degrees = full circle).",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Interpolate",
+          "definition": "Calculating intermediate values between two known values.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "MoveToward",
+          "definition": "Moving a value toward a target by a fixed step amount.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Direction",
+          "definition": "A normalized vector indicating which way something is facing or moving.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Velocity",
+          "definition": "The rate of change of position over time (speed with direction).",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Friction",
+          "definition": "Resistance that slows down movement when surfaces are in contact.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Gravity",
+          "definition": "A constant downward force applied to objects.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Impulse",
+          "definition": "An instantaneous force applied to a physics body.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Force",
+          "definition": "A continuous push or pull applied to a physics body over time.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Modulo",
+          "definition": "The remainder after division (e.g., 7 % 3 = 1).",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Curve",
+          "definition": "A mathematical function that defines a smooth path or transition.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Sin",
+          "definition": "Sine function; produces wave-like values useful for oscillations and rotations.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Cos",
+          "definition": "Cosine function; produces wave-like values useful for rotations and oscillations.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Tan",
+          "definition": "Tangent function; ratio of sine to cosine.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Noise",
+          "definition": "Random or pseudo-random values used for procedural generation.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Perlin",
+          "definition": "A type of noise function that produces smooth, natural-looking random patterns.",
+          "badges": ["universal"]
+        }
+      ]
+    },
+    {
+      "id": "game-logic-architecture",
+      "title": "Game Logic & Architecture",
+      "terms": [
+        {
+          "term": "State",
+          "definition": "A distinct condition or mode that a game object or system can be in.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "FSM (Finite State Machine)",
+          "definition": "A system with a finite number of states and transitions between them.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Behavior tree",
+          "definition": "A hierarchical decision-making structure for AI, using nodes and branches.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Blackboard",
+          "definition": "A shared data storage system used by AI systems to share information.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "AI",
+          "definition": "Artificial Intelligence; systems that control non-player characters.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Pathfinding",
+          "definition": "The process of finding a path from one point to another, avoiding obstacles.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Navmesh",
+          "definition": "A navigation mesh; a data structure representing walkable areas for pathfinding.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Waypoint",
+          "definition": "A point in space used as a navigation target or checkpoint.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Steering",
+          "definition": "AI behavior that guides movement toward a target while avoiding obstacles.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Timer",
+          "definition": "A system that tracks elapsed time and triggers events after a duration.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Event bus",
+          "definition": "A centralized system for broadcasting and receiving events across the game.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Observer",
+          "definition": "A design pattern where objects subscribe to and react to events.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Pub/Sub",
+          "definition": "Publish/Subscribe pattern; a messaging system where publishers send messages to subscribers.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Singleton",
+          "definition": "A class that ensures only one instance exists throughout the application.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Dependency injection",
+          "definition": "A design pattern where dependencies are provided to objects rather than created internally.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Serialization",
+          "definition": "Converting objects or data structures into a format that can be stored or transmitted.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Save system",
+          "definition": "A system that persists game state to disk for loading later.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Checkpoint",
+          "definition": "A saved game state that players can return to if they fail.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Spawn",
+          "definition": "Creating and placing a new game object into the world.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Despawn",
+          "definition": "Removing a game object from the world.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Pooling",
+          "definition": "Reusing objects instead of creating and destroying them for better performance.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Garbage collection",
+          "definition": "Automatic memory management that frees unused objects.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Memory leak",
+          "definition": "When memory is allocated but never freed, causing gradual memory consumption increase.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Profiling",
+          "definition": "Measuring performance to identify bottlenecks and optimization opportunities.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Debug",
+          "definition": "Finding and fixing errors in code.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Breakpoint",
+          "definition": "A point in code where execution pauses for inspection.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Logging",
+          "definition": "Recording information about program execution for debugging and monitoring.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Telemetry",
+          "definition": "Collecting and transmitting data about game performance and player behavior.",
+          "badges": ["universal"]
+        },
+        {
+          "term": "Analytics",
+          "definition": "Analysis of collected data to understand player behavior and game performance.",
+          "badges": ["universal"]
         }
       ]
     }
