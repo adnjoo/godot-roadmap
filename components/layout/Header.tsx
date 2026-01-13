@@ -23,28 +23,32 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center space-x-2">
+      <div className="container flex h-16 items-center justify-between gap-4 px-4 sm:px-6">
+        <Link href="/" className="flex items-center space-x-2 min-w-0 flex-shrink-0">
           <Image
             src="/Godot_icon.svg.png"
             alt="Godot Engine"
             width={24}
             height={24}
-            className="h-6 w-6"
+            className="h-6 w-6 flex-shrink-0"
           />
-          <span className="text-xl font-bold">Godot Roadmap</span>
+          <span className="text-xl font-bold hidden sm:inline">Godot Roadmap</span>
         </Link>
-        <nav className="flex items-center gap-4">
+        <nav className="flex items-center gap-1 sm:gap-4 flex-shrink-0">
           <Link href="/roadmap">
-            <Button variant="ghost">Roadmap</Button>
+            <Button variant="ghost" size="sm" className="text-sm px-2 sm:px-3">
+              Roadmap
+            </Button>
           </Link>
           <Link href="/projects">
-            <Button variant="ghost">Projects</Button>
+            <Button variant="ghost" size="sm" className="text-sm px-2 sm:px-3">
+              Projects
+            </Button>
           </Link>
           <ModeToggle />
           <AlertDialog>
             <AlertDialogTrigger asChild>
-              <Button variant="ghost" size="icon" title="Reset progress">
+              <Button variant="ghost" size="icon" title="Reset progress" className="h-9 w-9">
                 <RotateCcw className="h-4 w-4" />
               </Button>
             </AlertDialogTrigger>
