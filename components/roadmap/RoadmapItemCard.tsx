@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ExternalLink, Clock } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { GlowingEffect } from "@/components/ui/glowing-effect";
 import type { Difficulty, Category } from "@/lib/store/RoadmapContext";
 
 interface RoadmapItem {
@@ -73,6 +74,17 @@ export function RoadmapItemCard({ item, canStart }: RoadmapItemCardProps) {
         ]
       )}
     >
+      {/* Glowing effect - enabled when card is active or can be started */}
+      <GlowingEffect
+        disabled={!canStart || isCompleted}
+        glow={isActive}
+        proximity={50}
+        spread={30}
+        movementDuration={1.5}
+        borderWidth={1}
+        variant="default"
+      />
+      
       {/* Neon left accent bar - only for active items */}
       {isActive && (
         <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[hsl(var(--cyber-cyan))] to-[hsl(var(--cyber-magenta))] rounded-l-lg shadow-[0_0_10px_rgba(34,211,238,0.6)]" />
