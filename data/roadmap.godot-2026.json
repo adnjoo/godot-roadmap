@@ -1106,65 +1106,65 @@
     },
     {
       "id": "proj-04",
-      "title": "UI-only Menu Polish",
-      "description": "Focus entirely on UI/UX design. Create a polished main menu, settings screen, and pause menu with smooth transitions and professional styling.",
+      "title": "Mini Game: Menu Tycoon",
+      "description": "Design the full menu system for a fictional game. Build a polished main menu, settings screen, and pause menu with smooth transitions and professional UI feel.",
       "prerequisites": ["ui-01", "ui-02", "ui-03", "ui-05", "ui-06", "ui-09"],
       "checklist": [
-        "Design main menu with animations",
-        "Create settings screen with audio/video options",
-        "Build pause menu system",
-        "Implement theme and consistent styling",
-        "Add smooth transitions between screens",
-        "Test on different screen sizes"
+        "Design animated main menu for a fake game",
+        "Create settings screen (audio/video/keybinds)",
+        "Build in-game pause menu",
+        "Implement global theme + typography system",
+        "Add smooth transitions between all screens",
+        "Test responsive layouts (720p → 4K)"
       ],
-      "scope": "Small project: UI focus, no gameplay, 4-6 hours"
+      "scope": "Mini-game: UI mastery challenge, 4–6 hours"
     },
     {
       "id": "proj-05",
-      "title": "Physics Playground",
-      "description": "Experiment with RigidBody2D physics, create interactive physics objects, and build a sandbox with various physics interactions.",
+      "title": "Mini Game: Chaos Lab",
+      "description": "A physics toybox where players experiment with objects, forces, and puzzles. Focus on fun emergent behavior.",
       "prerequisites": ["2d-06", "2d-04", "found-04"],
       "checklist": [
-        "Create various physics objects",
-        "Implement force application",
+        "Create stackable and destructible physics objects",
+        "Implement push/pull/launch mechanics",
         "Add interactive elements (buttons, levers)",
-        "Create physics-based puzzles",
-        "Add visual feedback for interactions",
-        "Experiment with different physics materials"
+        "Design 3 small physics puzzles",
+        "Add impact VFX + sound feedback",
+        "Experiment with friction, bounce, mass"
       ],
-      "scope": "Small project: experimentation focus, 4-6 hours"
+      "scope": "Mini-game: physics sandbox, 4–6 hours"
     },
     {
       "id": "proj-06",
-      "title": "Animation Showcase",
-      "description": "Practice animation skills by creating a character with multiple animation states, smooth transitions, and visual effects.",
+      "title": "Mini Game: Mood Creature",
+      "description": "A tiny character that reacts emotionally to player input. Focus on animation states, transitions, and juice.",
       "prerequisites": ["2d-07", "2d-08", "2d-12"],
       "checklist": [
-        "Create character sprite animations",
+        "Create idle, happy, tired, scared animations",
         "Implement animation state machine",
-        "Add smooth transitions between states",
-        "Create particle effects for actions",
-        "Add visual feedback (screen shake, flashes)",
-        "Polish animation timing and feel"
+        "Add smooth blending between states",
+        "Create particles for special actions",
+        "Add screen shake + hit flashes",
+        "Polish timing and personality"
       ],
-      "scope": "Small project: animation focus, 5-7 hours"
+      "scope": "Mini-game: animation feel test, 5–7 hours"
     },
     {
       "id": "proj-07",
-      "title": "Complete Game: Small Scope",
-      "description": "Build a complete, polished game from start to finish. Include all systems: gameplay, UI, audio, save/load, and export for distribution.",
+      "title": "Full Game: Small Scope Ship",
+      "description": "Build and ship a complete small game. Treat this like a real release: gameplay, UI, audio, saves, and export.",
       "prerequisites": ["shipping-01", "game-02", "game-07", "ui-01", "2d-01"],
       "checklist": [
-        "Design complete game concept",
-        "Implement all core gameplay",
-        "Create full UI system",
-        "Add audio (music and SFX)",
+        "Design tight 1-core-loop game concept",
+        "Implement all gameplay systems",
+        "Build full UI (menus + HUD)",
+        "Add music + sound effects",
         "Implement save/load",
-        "Polish and bug fixing",
-        "Export and test on target platform",
-        "Create store page or release materials"
+        "Polish + bug fixing pass",
+        "Export and test builds",
+        "Create itch/Steam page"
       ],
-      "scope": "Large project: complete game, 20-40 hours"
+      "scope": "Full game: 20–40 hours"
     }
   ]
 }
