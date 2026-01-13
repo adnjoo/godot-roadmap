@@ -1,33 +1,21 @@
 "use client";
 
 import { useMemo } from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { useRouter } from "next/navigation";
 import { useLocalStorageState } from "@/lib/hooks/useLocalStorageState";
 import { Jam } from "@/types/jam-log";
-
-function formatDate(dateString?: string): string {
-  if (!dateString) return "";
-  try {
-    const date = new Date(dateString);
-    return date.toLocaleDateString("en-US", {
-      month: "short",
-      day: "numeric",
-      year: "numeric",
-    });
-  } catch {
-    return dateString;
-  }
-}
 
 export function GameJamLogCard() {
   const router = useRouter();
   const [jams] = useLocalStorageState<Jam[]>("godotRoadmap.jamLog.v1", []);
 
-  const { count, lastJamName, lastJamDate } = useMemo(() => {
+  const { count, lastJamName, lastJamStatus } = useMemo(() => {
     const count = jams.length;
     let lastJamName: string | null = null;
-    let lastJamDate: string | null = null;
+    let lastJamStatus: "submitted" | "in-progress" | "past" | null = null;
 
     if (count > 0) {
       // Find the most recent jam by endDate
@@ -39,19 +27,29 @@ export function GameJamLogCard() {
 
       const mostRecent = sorted[0];
       lastJamName = mostRecent.name;
-      if (mostRecent.endDate) {
-        lastJamDate = formatDate(mostRecent.endDate);
+
+      // Determine status
+      if (mostRecent.gameUrl) {
+        lastJamStatus = "submitted";
+      } else if (mostRecent.endDate) {
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        const endDate = new Date(mostRecent.endDate);
+        endDate.setHours(0, 0, 0, 0);
+
+        if (endDate > today) {
+          lastJamStatus = "in-progress";
+        } else {
+          lastJamStatus = "past";
+        }
       }
     }
 
-    return { count, lastJamName, lastJamDate };
+    return { count, lastJamName, lastJamStatus };
   }, [jams]);
 
   return (
-    <Card
-      className="h-full flex flex-col cursor-pointer hover:shadow-md transition-shadow"
-      onClick={() => router.push("/projects/jams")}
-    >
+    <Card className="h-full flex flex-col hover:shadow-md transition-shadow">
       <CardHeader>
         <CardTitle className="font-semibold text-lg">Game Jam Log</CardTitle>
         <CardDescription>
@@ -66,13 +64,43 @@ export function GameJamLogCard() {
           <div className="text-muted-foreground">
             Last: {lastJamName || "—"}
           </div>
-          {lastJamDate && (
-            <div className="text-muted-foreground">
-              Due: {lastJamDate}
+          {lastJamStatus && (
+            <div className="mt-2">
+              <Badge
+                variant={
+                  lastJamStatus === "submitted"
+                    ? "default"
+                    : lastJamStatus === "in-progress"
+                    ? "secondary"
+                    : "outline"
+                }
+                className={
+                  lastJamStatus === "submitted"
+                    ? "bg-green-500/10 text-green-700 dark:text-green-400 border-green-500/20"
+                    : lastJamStatus === "in-progress"
+                    ? "bg-blue-500/10 text-blue-700 dark:text-blue-400 border-blue-500/20"
+                    : "bg-muted text-muted-foreground"
+                }
+              >
+                {lastJamStatus === "submitted"
+                  ? "Submitted"
+                  : lastJamStatus === "in-progress"
+                  ? "In progress"
+                  : "Past"}
+              </Badge>
             </div>
           )}
         </div>
       </CardContent>
+      <CardFooter className="flex flex-col gap-2">
+        <Button
+          className="w-full"
+          onClick={() => router.push("/projects/jams")}
+        >
+          Open Jam Log
+        </Button>
+        <p className="text-xs text-muted-foreground text-center">Saved locally</p>
+      </CardFooter>
     </Card>
   );
 }
