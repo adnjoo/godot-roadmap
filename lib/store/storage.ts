@@ -61,3 +61,30 @@ export function loadProjectProgress(): ProjectProgressStorage | null {
     return null;
   }
 }
+
+const GYM_PROGRESS_STORAGE_KEY = "godot-roadmap:gym-progress:v1";
+
+export interface GymProgressStorage {
+  completedNodes: string[];
+}
+
+export function saveGymProgress(data: GymProgressStorage): void {
+  if (typeof window === "undefined") return;
+  try {
+    localStorage.setItem(GYM_PROGRESS_STORAGE_KEY, JSON.stringify(data));
+  } catch (error) {
+    console.error("Failed to save practice garden progress:", error);
+  }
+}
+
+export function loadGymProgress(): GymProgressStorage | null {
+  if (typeof window === "undefined") return null;
+  try {
+    const stored = localStorage.getItem(GYM_PROGRESS_STORAGE_KEY);
+    if (!stored) return null;
+    return JSON.parse(stored) as GymProgressStorage;
+  } catch (error) {
+    console.error("Failed to load practice garden progress:", error);
+    return null;
+  }
+}
