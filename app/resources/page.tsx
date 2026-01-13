@@ -121,6 +121,25 @@ const books = [
   },
 ];
 
+const other = [
+  {
+    name: "Godot Forum",
+    url: "https://forum.godotengine.org/",
+    description:
+      "A place for the Godot community to meet, ask questions, share their work, and provide help to other users.",
+  },
+  {
+    name: "Godot Cafe",
+    url: "https://discord.com/invite/zH7NUgz",
+    description: "Community Discord server with 80k+ members for Godot developers to chat and share knowledge.",
+  },
+  {
+    name: "Godot Engine Discord",
+    url: "https://discord.com/invite/godotengine",
+    description: "Official Godot Engine Discord server with 60k+ members for community support and discussions.",
+  },
+];
+
 export default function ResourcesPage() {
   return (
     <div className="container py-8 max-w-5xl">
@@ -146,7 +165,7 @@ export default function ResourcesPage() {
         <Accordion
           type="multiple"
           className="w-full space-y-4"
-          defaultValue={["tutorials", "youtube-channels", "asset-libraries", "books"]}
+          defaultValue={["tutorials", "youtube-channels", "asset-libraries", "books", "other"]}
         >
           <AccordionItem value="tutorials" className="border rounded-lg px-4">
             <AccordionTrigger className="text-2xl font-semibold hover:no-underline">
@@ -218,6 +237,24 @@ export default function ResourcesPage() {
                     whatItTeaches={book.whatItTeaches}
                     whyItMatters={book.whyItMatters}
                     greatFor={book.greatFor}
+                  />
+                ))}
+              </div>
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="other" className="border rounded-lg px-4">
+            <AccordionTrigger className="text-2xl font-semibold hover:no-underline">
+              🔗 Other
+            </AccordionTrigger>
+            <AccordionContent>
+              <div className="space-y-4 pt-2">
+                {other.map((item) => (
+                  <YouTubeChannelCard
+                    key={item.name}
+                    name={item.name}
+                    url={item.url}
+                    description={item.description}
                   />
                 ))}
               </div>
