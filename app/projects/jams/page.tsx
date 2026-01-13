@@ -6,6 +6,7 @@ import { Jam } from "@/types/jam-log";
 import { useLocalStorageState } from "@/lib/hooks/useLocalStorageState";
 import { JamList } from "@/components/jams/JamList";
 import { JamForm } from "@/components/jams/JamForm";
+import { RecommendedJams } from "@/components/jams/RecommendedJams";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Plus } from "lucide-react";
 
@@ -110,6 +111,8 @@ export default function JamsPage() {
         onDelete={handleDelete}
         editingJamId={editingJam?.id}
       />
+
+      <RecommendedJams defaultOpen={jams.length === 0} />
     </div>
   );
 }
