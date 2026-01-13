@@ -5,6 +5,7 @@ import { RoadmapProvider } from "@/lib/store/RoadmapContext";
 import { Header } from "@/components/layout/Header";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Footer } from "@/components/layout/Footer";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,6 +31,7 @@ export default function RootLayout({
             </div>
           </RoadmapProvider>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
