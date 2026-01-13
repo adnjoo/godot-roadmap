@@ -119,6 +119,16 @@ const books = [
     whyItMatters: "Broad and deep — perfect if you want theory + practice.",
     greatFor: "anyone serious about game design",
   },
+  {
+    title: "Designing Games: A Guide to Engineering Experiences",
+    author: "Tynan Sylvester",
+    url: "https://tynansylvester.com/book/",
+    whatItTeaches:
+      "Game mechanics that evoke emotions, narrative integration, multiplayer interactions, reward systems, and iterative design processes.",
+    whyItMatters:
+      "Focuses on engineering emotionally engaging player experiences through elegant mechanics and compelling design.",
+    greatFor: "designers & developers who want to understand player psychology",
+  },
 ];
 
 const other = [

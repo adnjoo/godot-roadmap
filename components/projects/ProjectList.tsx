@@ -3,6 +3,7 @@
 import { useProjectProgress } from "@/lib/store/ProjectProgressContext";
 import { ProjectCard } from "./ProjectCard";
 import { GameJamLogCard } from "./GameJamLogCard";
+import { GymCard } from "./GymCard";
 import roadmapData from "@/data/roadmap.godot-2026.json";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -31,6 +32,7 @@ export function ProjectList() {
 
       <TabsContent value="all" className="mt-0">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <GymCard />
           <GameJamLogCard />
           {allProjects.map((project) => (
             <ProjectCard key={project.id} project={project} />
@@ -40,6 +42,7 @@ export function ProjectList() {
 
       <TabsContent value="remaining" className="mt-0">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <GymCard />
           <GameJamLogCard />
           {remainingProjects.map((project) => (
             <ProjectCard key={project.id} project={project} />
@@ -54,6 +57,7 @@ export function ProjectList() {
 
       <TabsContent value="completed" className="mt-0">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <GymCard />
           <GameJamLogCard />
           {completedProjectsList.map((project) => (
             <ProjectCard key={project.id} project={project} />

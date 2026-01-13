@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { RoadmapProvider } from "@/lib/store/RoadmapContext";
 import { ProjectProgressProvider } from "@/lib/store/ProjectProgressContext";
+import { GymProvider } from "@/lib/store/GymContext";
 import { Header } from "@/components/layout/Header";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Footer } from "@/components/layout/Footer";
@@ -27,11 +28,13 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <RoadmapProvider>
             <ProjectProgressProvider>
-              <div className="min-h-screen flex flex-col">
-                <Header />
-                <main className="flex-1">{children}</main>
-                <Footer />
-              </div>
+              <GymProvider>
+                <div className="min-h-screen flex flex-col">
+                  <Header />
+                  <main className="flex-1">{children}</main>
+                  <Footer />
+                </div>
+              </GymProvider>
             </ProjectProgressProvider>
           </RoadmapProvider>
         </ThemeProvider>
