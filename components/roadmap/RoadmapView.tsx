@@ -3,7 +3,8 @@
 import { useRoadmap } from "@/lib/store/RoadmapContext";
 import { RoadmapItemCard } from "./RoadmapItemCard";
 import roadmapDataRaw from "@/data/roadmap.godot-2026.json";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 import type { RoadmapData, RoadmapItem } from "@/types/roadmap";
 
 const roadmapData = roadmapDataRaw as RoadmapData;
@@ -55,26 +56,33 @@ export function RoadmapView() {
   };
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-12">
       {roadmapData.sections.map((section) => {
         const sectionItems = itemsBySection[section.id] || [];
         if (sectionItems.length === 0) return null;
 
         return (
-          <div key={section.id} id={section.id}>
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-xl">{section.title}</CardTitle>
-                <p className="text-sm text-muted-foreground mt-1">{section.description}</p>
-              </CardHeader>
-              <CardContent>
-                <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-1">
-                  {sectionItems.map((item) => (
-                    <RoadmapItemCard key={item.id} item={item} canStart={canStartItem(item)} />
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+          <div key={section.id} id={section.id} className="space-y-6">
+            {/* Section Header */}
+            <div className="space-y-1">
+              <h2 className="text-2xl font-bold dark:text-[hsl(var(--cyber-cyan))] text-gray-900">
+                {section.title}
+              </h2>
+              <p className="text-sm text-muted-foreground">{section.description}</p>
+            </div>
+
+            {/* Metro Line Items */}
+            <div className="space-y-0">
+              {sectionItems.map((item, index) => (
+                <RoadmapItemCard
+                  key={item.id}
+                  item={item}
+                  canStart={canStartItem(item)}
+                  isFirst={index === 0}
+                  isLast={index === sectionItems.length - 1}
+                />
+              ))}
+            </div>
           </div>
         );
       })}

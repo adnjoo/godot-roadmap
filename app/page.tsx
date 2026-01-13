@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { BookOpen, Map, FolderKanban, HelpCircle, FileText } from "lucide-react";
+import { BookOpen, Map, FolderKanban, HelpCircle } from "lucide-react";
 
 export default function Home() {
   return (
