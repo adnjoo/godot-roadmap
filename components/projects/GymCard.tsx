@@ -21,10 +21,14 @@ export function GymCard() {
             <div className="flex-1">
               <div className="flex items-center gap-2 mb-2">
                 <h3 className="font-semibold text-lg">Practice Garden 🌱 (200 Projects)</h3>
+                <Badge variant="secondary" className="bg-red-500/10 text-red-700 dark:text-red-400 border-red-500">
+                  Advanced
+                </Badge>
               </div>
               <p className="text-sm text-muted-foreground">
-                Master Godot through 200 hands-on projects organized in a skill tree graph. 
-                Progress through 5 tiers from basics to advanced systems.
+                🌱 This is a long-term mastery path<br />
+                You don't need to finish all 200 projects.<br />
+                Pick what interests you, skip freely, and come back anytime.
               </p>
             </div>
           </div>
